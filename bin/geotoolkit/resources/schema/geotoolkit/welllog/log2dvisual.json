@@ -1,0 +1,129 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.Log2DVisual",
+  "description": "A JSON schema describing array log visual",
+  "title": "2D Log Visual",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.LogAbstractVisual"},
+    {
+      "properties": {
+        "ClassName": {
+          "default": "geotoolkit.welllog.Log2DVisual",
+          "description": "An explanation about the purpose of this instance.",
+          "enum": ["geotoolkit.welllog.Log2DVisual"],
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/ClassName",
+          "title": "Class Name",
+          "type": "string"
+        },
+        "colorprovider": {
+          "description": "A class which provides the color for te specified value",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/colorprovider",
+          "title": "Color Provider",
+          "oneOf": [
+            {"type": "null"},
+            { "$ref": "/geotoolkit.util.DefaultColorProvider" }
+          ]
+        },
+        "offsets": {
+          "additionalItems": true,
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/offsets",
+          "description": "An array of the offsets, or a number which is applied to everything",
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "uniqueItems": false
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "minangle": {
+          "default": 0,
+          "description": "The minimum angle displayed by this log",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/minangle",
+          "title": "Min Angle",
+          "type": "number"
+        },
+        "maxangle": {
+          "default": 6.28318530718,
+          "description": "The maximum angle displayed by this log",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/maxangle",
+          "title": "Max Angle",
+          "type": "number"
+        },
+        "autoanglelimits": {
+          "default": false,
+          "description": "Defines if the angles should be calculated automatically by the data.",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/autoanglelimits",
+          "title": "Auto Angle Limits",
+          "type": "boolean"
+        },
+        "wrapinterpolation": {
+          "default": false,
+          "description": "True if values should interpolate from max angle to min angle",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/wrapinterpolation",
+          "title": "Wrap Interpolation",
+          "type": "boolean"
+        },
+        "rowsinterpolation": {
+          "default": "STEP",
+          "description": "Type of interpolation for the rows",
+          "enum": ["STEP", "LINEAR"],
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/rowsinterpolation",
+          "title": "Rows Interpolation",
+          "type": "string"
+        },
+        "columnalignment": {
+          "default": "RIGHT",
+          "description": "Type of interpolation alignment of column",
+          "enum": ["LEFT", "CENTER", "TABLE", "RIGHT"],
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/columnalignment",
+          "title": "Column Alignment",
+          "type": "string"
+        },
+        "rowalignment": {
+          "default": "CENTER",
+          "description": "Type of interpolation alignment of row",
+          "enum": ["TOP", "CENTER"],
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/rowalignment",
+          "title": "Row Alignment",
+          "type": "string"
+        },
+        "microposleft": {
+          "default": 0,
+          "description": "The left micro position.",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/microposleft",
+          "title": "The Microposition Left Schema",
+          "type": "number"
+        },
+        "microposright": {
+          "default": 1,
+          "description": "The right micro position.",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/microposright",
+          "title": "The Microposition Right Schema",
+          "type": "number"
+        },
+        "plotmode": {
+          "default": "STEP",
+          "description": "The plot type defines the interpolation type for columns",
+          "enum": ["STEP", "LINEAR"],
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/plotmode",
+          "title": "Plot Mode",
+          "type": "string"
+        },
+        "webglrendering": {
+          "default": false,
+          "description": "The flag defining whether to use WebGL for rendering",
+          "id": "/geotoolkit.welllog.Log2DVisual/properties/webglrendering",
+          "title": "WebGL Rendering",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

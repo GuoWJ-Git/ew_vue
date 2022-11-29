@@ -1,0 +1,27 @@
+{
+  "additionalProperties": true,
+  "description": "This document contains a schema describing geotoolkit.attributes.GeometryPattern class instance",
+  "id": "/geotoolkit.attributes.GeometryPattern",
+  "title": "Geotoolkit GeometryPattern Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.Pattern" },
+    {
+      "properties": {
+        "scalable": {
+          "default": false,
+          "description": "True to scale the pattern together with the shape, false to keep constant pattern size and multiply instead.",
+          "id": "/geotoolkit.attributes.GeometryPattern/properties/scalable",
+          "title": "Name",
+          "type": "boolean"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.attributes.GeometryPattern",
+            "id": "/geotoolkit.attributes.GeometryPattern/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.util.NumberFormat",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.util.Format"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.NumberFormat",
+            "id": "/geotoolkit.util.NumberFormat/properties/ClassName"
+          }]
+        },
+        "fulllocale": {
+          "default": false,
+          "description": "Specifies if the locale has to be displayed in full form",
+          "id": "/geotoolkit.util.NumberFormat/properties/fulllocale",
+          "title": "Display Full Locale",
+          "type": "boolean"
+        },
+        "grouplength": {
+          "default": 3,
+          "description": "The length of group of numbers",
+          "id": "/geotoolkit.util.NumberFormat/properties/grouplength",
+          "title": "Group Length",
+          "type": "integer"
+        },
+        "locale": {
+          "description": "An explanation about the purpose of this instance.",
+          "id": "/geotoolkit.util.NumberFormat/properties/locale",
+          "title": "The Locale Schema",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.util.Locale" },
+            { "type": "string", "memento": true }
+          ]
+        },
+        "maximumfractiondigits": {
+          "default": 3,
+          "description": "Maximum digits to display after the point",
+          "id": "/geotoolkit.util.NumberFormat/properties/maximumfractiondigits",
+          "title": "The Maximumfractiondigits Schema",
+          "type": "number"
+        },
+        "round": {
+          "default": true,
+          "description": "True to round up the number",
+          "id": "/geotoolkit.util.NumberFormat/properties/round",
+          "title": "The Round Schema",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

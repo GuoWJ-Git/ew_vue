@@ -1,0 +1,77 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.schematics.widgets.SchematicsWidget",
+    "description": "Schema describing Schematics Widget",
+    "title": "Schematics Widget Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.widgets.AnnotatedWidget" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.schematics.widgets.SchematicsWidget",
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/ClassName"
+                        }
+                    ]
+                },
+                "labeling": {
+                    "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling",
+                    "type": "object",
+                    "properties": {
+                        "componentsfilter": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling/properties/componentsfilter",
+                            "$ref": "/geotoolkit.schematics.labeling.DefaultComponentsFilter"
+                        },
+                        "mode": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling/properties/mode",
+                            "type": "string",
+                            "enum": ["NoLabels", "Docked", "Trajectory", "Adjacent"]
+                        },
+                        "defaultLocation": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling/properties/defaultLocation",
+                            "type": "integer"
+                        },
+                        "labelShape": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling/properties/labelShape",
+                            "$ref": "/geotoolkit.schematics.labeling.DefaultLabelShape"
+                        },
+                        "connectorShape": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/labeling/properties/connectorShape",
+                            "oneOf": [
+                                { "type": "null" },
+                                { "$ref": "/geotoolkit.schematics.labeling.ConnectorShape" }
+                            ]
+                        }
+                    }
+                },
+                "legend": {
+                    "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/legend",
+                    "type": "object",
+                    "properties": {
+                        "alignment": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/legend/properties/alignment",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "wellborenode": {
+                    "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/wellborenode",
+                    "type": "object",
+                    "properties": {
+                        "valueviewmode": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/wellborenode/properties/valueviewmode",
+                            "type": "string"
+                        },
+                        "viewMode": {
+                            "id": "/geotoolkit.schematics.widgets.SchematicsWidget/properties/wellborenode/properties/viewMode",
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

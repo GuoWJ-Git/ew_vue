@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.scene.shapes.ScaledShape",
+  "description": "This schema describes Carnac Scaled Shape abstract class",
+  "title": "Carnac Scaled Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.shapes.Shape" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.scene.shapes.ScaledShape",
+            "id": "/geotoolkit.scene.shapes.ScaledShape/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

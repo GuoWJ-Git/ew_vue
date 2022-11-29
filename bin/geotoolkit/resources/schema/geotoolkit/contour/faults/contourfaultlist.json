@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.faults.ContourFaultList",
+    "description": "Schema describing Contour FaultList",
+    "title": "Contour FaultList Schema",
+    "type": "object"
+}

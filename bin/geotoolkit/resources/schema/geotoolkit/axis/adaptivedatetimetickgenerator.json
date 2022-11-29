@@ -1,0 +1,134 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.TickGenerator"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.AdaptiveDateTimeTickGenerator",
+              "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/ClassName"
+            }
+          ]
+        },
+        "timezone": {
+          "default": 0,
+          "description": "The enum value of the time zone to which the time ticks should be formatted.",
+          "enum": [0, 1],
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/timezone",
+          "title": "Time Zone",
+          "type": "integer"
+        },
+        "formatlabeleventhandler": {
+          "default": null,
+          "description": "A function used by the tickgenerator to build a label for a given model value",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/formatlabeleventhandler",
+          "title": "Format Label Handler",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"}
+          ]
+        },
+        "minspan": {
+          "default": 15,
+          "description": "Minimum distance between ticks in device space",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/minspan",
+          "title": "Minimum Span",
+          "type": "number"
+        },
+        "labelminspan": {
+          "default": 10,
+          "description": "Minimum distance between 2 labels",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/labelminspan",
+          "title": "Label Minimum Span",
+          "type": "number"
+        },
+        "labeledgespan": {
+          "default": 2,
+          "description": "Distance of label from edge",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/labeledgespan",
+          "title": "The Labeledgespan Schema",
+          "type": "number"
+        },
+        "rotatelabels": {
+          "default": true,
+          "description": "Flag defining if labels should be rotated",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/rotatelabels",
+          "title": "Rotate Labels",
+          "type": "boolean"
+        },
+        "localtimezoneoffset": {
+          "default": 0,
+          "description": "The offset of time zone",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/localtimezoneoffset",
+          "title": "Local Time Zone Offset",
+          "type": "number"
+        },
+        "edgetick": {
+          "description": "The styling of the edge tick, or a reference to a style in tickstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/edgetick",
+          "title": "Edge Tick Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "string" }
+          ]
+        },
+        "edgelabel": {
+          "description": "The styling of the edge label, or a reference to a style in labelstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/edgelabel",
+          "title": "Edge Label Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.TextStyle" },
+            { "type": "string" }
+          ]
+        },
+        "majorlabel": {
+          "description": "The styling of the major label, or a reference to a style in labelstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/majorlabel",
+          "title": "Major Label Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.TextStyle" },
+            { "type": "string" }
+          ]
+        },
+        "majortick": {
+          "description": "The styling of the major tick, or a reference to a style in tickstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/majortick",
+          "title": "Major Tick Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "string" }
+          ]
+        },
+        "minorlabel": {
+          "description": "The styling of the minor label, or a reference to a style in labelstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/minorlabel",
+          "title": "Minor Label Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.TextStyle" },
+            { "type": "string" }
+          ]
+        },
+        "minortick": {
+          "description": "The styling of the minor tick, or a reference to a style in tickstyles object.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/minortick",
+          "title": "Minor Tick Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "string" }
+          ]
+        }
+      }
+    }
+  ]
+}

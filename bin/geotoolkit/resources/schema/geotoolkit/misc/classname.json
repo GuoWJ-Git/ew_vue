@@ -1,0 +1,6 @@
+{
+  "description": "An explanation about the purpose of this instance",
+  "id": "/ClassName",
+  "title": "Class Name",
+  "type": "string"
+}

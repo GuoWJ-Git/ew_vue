@@ -1,0 +1,34 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogBlock",
+  "description": "Schema describing geotoolkit Log Block",
+  "title": "Log Block Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.LogAbstractVisual" },
+    {
+      "properties": {
+        "fillstyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.welllog.LogBlock/properties/fillstyle",
+          "oneOf": [
+            {
+              "$ref": "/geotoolkit.attributes.FillStyle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "position": {
+          "description": "A value of geotoolkit.welllog.LogBlock Position enum",
+          "maximum": 2,
+          "minimum": 0,
+          "id": "/geotoolkit.welllog.LogBlock/properties/position",
+          "title": "Position",
+          "type": "integer"
+        }
+      }
+    }
+  ]
+}

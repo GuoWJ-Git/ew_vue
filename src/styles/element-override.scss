@@ -1,0 +1,67 @@
+/* element-plus组件覆盖样式 */
+body {
+  .el-input__inner {
+    // 去除type=number的上下箭头
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none !important;
+    }
+
+    &[type='number'] {
+      -moz-appearance: textfield !important;
+      line-height: 1;
+    }
+
+    // &[changeBackgroundColor] {
+    //   background-color: rgba(235, 238, 245, 0.5);
+
+    //   .el-range-input {
+    //     background-color: rgba(235, 238, 245, 0.5);
+    //   }
+    // }
+  }
+
+  .el-date-editor .el-range-separator {
+    width: 15%;
+    line-height: 24px;
+  }
+
+  // .el-select[changeBackgroundColor] {
+  //   .el-input__inner {
+  //     background-color: rgba(235, 238, 245, 0.5);
+
+  //     .el-range-input {
+  //       background-color: rgba(235, 238, 245, 0.5);
+  //     }
+  //   }
+  // }
+  .el-icon-arrow-down::before {
+    // 设置颜色选择器箭头颜色
+    color: #999;
+  }
+
+  .el-pagination .btn-next .el-icon,
+  .el-pagination .btn-prev .el-icon {
+    display: inline-block;
+  }
+
+  .is-message-box {
+    z-index: 5000 !important;
+  }
+
+  .el-message {
+    z-index: 9000 !important;
+  }
+
+  .el-form-item--small.el-form-item {
+    margin-bottom: 24px;
+  }
+
+  .el-tabs__item .el-icon-close::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

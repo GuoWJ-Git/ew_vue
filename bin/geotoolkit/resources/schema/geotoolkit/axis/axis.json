@@ -1,0 +1,154 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing the geotoolkit Axis",
+  "title": "Axis",
+  "id": "/geotoolkit.axis.Axis",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.shapes.Shape" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.Axis",
+              "id": "/geotoolkit.axis.Axis/properties/ClassName"
+            }
+          ]
+        },
+        "autolabelrotation": {
+          "default": false,
+          "description": "Flag defining if labels should rotate automatically",
+          "id": "/geotoolkit.axis.Axis/properties/autolabelrotation",
+          "title": "Auto Label Rotation",
+          "type": "boolean"
+        },
+        "baselinestyle": {
+          "id": "/geotoolkit.axis.Axis/properties/baselinestyle",
+          "title": "Base Line Style",
+          "description": "The line style of the base line of the axis",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" }
+          ]
+        },
+        "labeloffset": {
+          "default": 2,
+          "description": "The offset of labels from the ticks",
+          "id": "/geotoolkit.axis.Axis/properties/labeloffset",
+          "title": "Label Offset",
+          "type": "number"
+        },
+        "labelposition": {
+          "default": "center",
+          "description": "Defines the position of the label relative to the axis.",
+          "enum": [ "center", "left", "top", "right", "bottom" ],
+          "id": "/geotoolkit.axis.Axis/properties/labelposition",
+          "title": "Label Position",
+          "type": "string"
+        },
+        "linestyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.axis.Axis/properties/linestyle",
+          "description": "The default line style to set to ticks",
+          "title": "Line Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" }
+          ]
+        },
+        "hideoverlappedtext": {
+          "default": true,
+          "description": "Flag defining if labels should be filtered automatically",
+          "id": "/geotoolkit.axis.Axis/properties/hideoverlappedtext",
+          "title": "Hide Overlapped Text",
+          "type": "boolean"
+        },
+        "orientation": {
+          "default": "vertical",
+          "description": "The direction that the axis is growing.",
+          "enum": [ "horizontal", "vertical" ],
+          "id": "/geotoolkit.axis.Axis/properties/orientation",
+          "title": "Orientation",
+          "type": "string"
+        },
+        "textstyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.axis.Axis/properties/textstyle",
+          "type": "object",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.TextStyle" }
+          ]
+        },
+        "tickgenerator": {
+          "description": "The class used to generate the ticks and labels for the axis",
+          "title": "Tick Generator",
+          "id": "/geotoolkit.axis.Axis/properties/tickgenerator",
+          "anyOf": [
+            { "$ref": "/geotoolkit.axis.AdaptiveTickGenerator" },
+            { "$ref": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator" },
+            { "$ref": "/geotoolkit.axis.AdaptiveLogTickGenerator" },
+            { "$ref": "/geotoolkit.axis.DateTimeTickGenerator" },
+            { "$ref": "/geotoolkit.axis.DiscreteValueTickGenerator" },
+            { "$ref": "/geotoolkit.axis.NumericLinearTickGenerator" },
+            { "$ref": "/geotoolkit.axis.NumericTickGenerator" },
+            { "$ref": "/geotoolkit.axis.SecondaryTickGenerator" }
+          ]
+        },
+        "tickposition": {
+          "default": "leftandright",
+          "description": "The position of the tick relative to the axis.",
+          "enum": [ "left", "top", "right", "bottom", "leftandright", "topandbottom", "between", "middle" ],
+          "id": "/geotoolkit.axis.Axis/properties/tickposition",
+          "title": "Tick Position",
+          "type": "string"
+        },
+        "title": {
+          "id": "/geotoolkit.axis.Axis/properties/title",
+          "description": "An object containing the properties for the axis title",
+          "title": "Title",
+          "type": "object",
+          "properties": {
+            "alignment": {
+              "description": "The alignment of the title relative to its parent bounds.",
+              "id": "/geotoolkit.axis.Axis/properties/title/properties/alignment",
+              "title": "Alignment",
+              "$ref": "/geotoolkit.util.AnchorType"
+            },
+            "text": {
+              "description": "The string representing the actual title to display",
+              "id": "/geotoolkit.axis.Axis/properties/title/properties/text",
+              "title": "Text",
+              "anyOf": [
+                {"type": "null"},
+                {"type": "string"}
+              ]
+            },
+            "textstyle": {
+              "description": "The style of the title to display.",
+              "id": "/geotoolkit.axis.Axis/properties/title/properties/textstyle",
+              "title": "Text Style",
+              "$ref": "/geotoolkit.attributes.TextStyle"
+            },
+            "visible": {
+              "default": false,
+              "description": "The flag which defines if the title is visible.",
+              "id": "/geotoolkit.axis.Axis/properties/title/properties/visible",
+              "title": "Title Visible",
+              "type": "boolean"
+            }
+          }
+        },
+        "visiblebaseline": {
+          "default": true,
+          "description": "Flag which defines if the base line of the axis should be visible",
+          "id": "/geotoolkit.axis.Axis/properties/visiblebaseline",
+          "title": "Base Line Visible",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

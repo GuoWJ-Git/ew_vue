@@ -1,0 +1,127 @@
+{
+  "id": "/geotoolkit.axis.DateZoomLevel",
+  "description": "The schema of date zoom level enum",
+  "properties": {
+    "Centisecond": {
+      "default": 1,
+      "description": "0.01 seconds",
+      "enum": [1],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Centisecond",
+      "title": "Centisecond",
+      "type": "integer"
+    },
+    "Century": {
+      "default": 14,
+      "description": "100 years",
+      "enum": [14],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Century",
+      "title": "Century",
+      "type": "integer"
+    },
+    "Day": {
+      "default": 9,
+      "description": "24 hours",
+      "enum": [9],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Day",
+      "title": "Day",
+      "type": "integer"
+    },
+    "Decade": {
+      "default": 13,
+      "description": "10 years",
+      "enum": [13],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Decade",
+      "title": "Decade",
+      "type": "integer"
+    },
+    "Decisecond": {
+      "default": 2,
+      "description": "0.1 seconds",
+      "enum": [2],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Decisecond",
+      "title": "Decisecond",
+      "type": "integer"
+    },
+    "Hour": {
+      "default": 7,
+      "description": "60 minutes",
+      "enum": [7],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Hour",
+      "title": "Hour",
+      "type": "integer"
+    },
+    "Millisecond": {
+      "default": 0,
+      "description": "0.001 seconds",
+      "enum": [0],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Millisecond",
+      "title": "Millisecond",
+      "type": "integer"
+    },
+    "Minute": {
+      "default": 5,
+      "description": "60 seconds",
+      "enum": [5],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Minute",
+      "title": "Minute",
+      "type": "integer"
+    },
+    "Month": {
+      "default": 11,
+      "description": "~30 days",
+      "enum": [11],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Month",
+      "title": "Month",
+      "type": "integer"
+    },
+    "Second": {
+      "default": 3,
+      "description": "The base unit of time",
+      "enum": [3],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Second",
+      "title": "Second",
+      "type": "integer"
+    },
+    "SixHours": {
+      "default": 8,
+      "description": "6 hours",
+      "enum": [8],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/SixHours",
+      "title": "Sixhours",
+      "type": "integer"
+    },
+    "TenMinutes": {
+      "default": 6,
+      "description": "10 minutes",
+      "enum": [6],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/TenMinutes",
+      "title": "Tenminutes",
+      "type": "integer"
+    },
+    "TenSeconds": {
+      "default": 4,
+      "description": "10 seconds",
+      "enum": [4],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/TenSeconds",
+      "title": "Tenseconds",
+      "type": "integer"
+    },
+    "Week": {
+      "default": 10,
+      "description": "7 days",
+      "enum": [10],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Week",
+      "title": "Week",
+      "type": "integer"
+    },
+    "Year": {
+      "default": 12,
+      "description": "365 days",
+      "enum": [12],
+      "id": "/geotoolkit.axis.DateZoomLevel/properties/Year",
+      "title": "Year",
+      "type": "integer"
+    }
+  },
+  "type": "object"
+}

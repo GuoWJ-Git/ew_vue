@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit format",
+  "id": "/geotoolkit.util.Format",
+  "title": "Carnac Format",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Format",
+            "id": "/geotoolkit.util.Format/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

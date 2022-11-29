@@ -1,0 +1,64 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.util.ColorMap",
+    "description": "Schema describing Colormap",
+    "title": "ColorMap Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.util.ColorProvider"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.seismic.util.ColorMap",
+                            "id": "/geotoolkit.seismic.util.ColorMap/properties/ClassName"
+                        }
+                    ]
+                },
+                "name": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/name",
+                    "type": "string"
+                },
+                "tracecolor": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/tracecolor",
+                    "$ref": "/geotoolkit.util.RgbaColor"
+                },
+                "positivefillstyle": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/positivefillstyle",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.attributes.FillStyle" }
+                    ]
+                },
+                "negativefillstyle": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/negativefillstyle",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.attributes.FillStyle" }
+                    ]
+                },
+                "positivefillcolor": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/positivefillcolor",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.util.RgbaColor" }
+                    ]
+                },
+                "negativefillcolor": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/negativefillcolor",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.util.RgbaColor" }
+                    ]
+                },
+                "colors": {
+                    "id": "/geotoolkit.seismic.util.ColorMap/properties/colors",
+                    "type": "array",
+                    "items": { "$ref": "/geotoolkit.util.RgbaColor" }
+                }
+            }
+        }
+    ]
+}

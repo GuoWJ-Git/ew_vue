@@ -1,0 +1,38 @@
+{
+  "author": "support@int.com",
+  "bugs": {
+    "url": "https://jira.int.com/projects/HTML/issues"
+  },
+  "bundleDependencies": false,
+  "type": "module",
+  "deprecated": false,
+  "description": "GeoToolkit is a comprehensive set of high-performance 2D/3D tools and libraries.",
+  "homepage": "https://www.int.com",
+  "keywords": [
+    "geotoolkit"
+  ],
+  "license": "SEE LICENSE IN license.html",
+  "name": "@int/geotoolkit",
+  "private": true,
+  "sideEffects": [
+    "**/bootstrap/**",
+    "**/THREE.js",
+    "**/INTDevToolHelper.js"
+  ],
+  "version": "3.4.73",
+  "dependencies": {
+
+  },
+  "optionalDependencies": {
+    "@xmldom/xmldom": "^0.8.1",
+    "jsdom": "^19.0.0",
+    "canvas": "^2.9.1"
+  },
+  "peerDependencies": {
+    "@int/impl": "3.4.73"
+  },
+  "browser": {
+    "./seismic/data/LocalFile.js": "./seismic/data/BrowserLocalFile.js",
+    "./window.js": "./browserwindow.js"
+  }
+}

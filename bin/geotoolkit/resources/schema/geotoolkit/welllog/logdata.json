@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing LogData",
+  "id": "/geotoolkit.welllog.data.LogData",
+  "title": "WellLog LogData",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.welllog.data.LogData",
+            "id": "/geotoolkit.welllog.data.LogData/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogAbstractVisual",
+  "description": "A JSON schema describing abstract log visual",
+  "title": "Abstract Log Visual Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.Node"},
+    {
+      "properties": {
+        "linestyle": {
+          "id": "/geotoolkit.welllog.LogAbstractVisual/properties/linestyle",
+          "title": "Line Style",
+          "description": "The styling of the lines in this visual",
+          "oneOf": [
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "null" }
+          ]
+        }
+      }
+    }
+  ]
+}

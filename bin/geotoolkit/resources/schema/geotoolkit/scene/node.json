@@ -1,0 +1,61 @@
+{
+  "additionalProperties": true,
+  "description": "A JSON schema describing geotoolkit Node",
+  "id": "/geotoolkit.scene.Node",
+  "title": "Geotoolkit Node Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.EventDispatcher" },
+    {
+      "properties": {
+        "name": {
+          "description": "The name of this node to be referenced later.",
+          "id": "/geotoolkit.scene.Node/properties/name",
+          "title": "Name",
+          "type": "string"
+        },
+        "selectable": {
+          "default": true,
+          "description": "Flag specifying if the rectangle is selectable",
+          "id": "/geotoolkit.scene.Node/properties/_isSelectable",
+          "title": "Selectable",
+          "type": "boolean"
+        },
+        "visible": {
+          "default": true,
+          "description": "The flag defining if this node has to be rendered",
+          "id": "/geotoolkit.scene.Node/properties/isVisible",
+          "title": "Visible",
+          "type": "boolean"
+        },
+        "id": {
+          "id": "/geotoolkit.scene.Node/properties/id",
+          "title": "ID",
+          "description": "The id of this node instance used to identify this object",
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"},
+            {"type": "number"}
+          ]
+        },
+        "tag": {
+          "description": "An object associated with the node by user, or a tag name/number",
+          "id": "/geotoolkit.scene.Node/properties/tag",
+          "title": "Tag",
+          "anyOf": [
+            {"type": "object"},
+            {"type": "string"},
+            {"type": "number"},
+            { "type": "null" }
+          ]
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.scene.Node",
+            "id": "/geotoolkit.scene.Node/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

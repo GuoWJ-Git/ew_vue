@@ -1,0 +1,35 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.header.LogAxisVisualHeader",
+  "description": "Schema describing geotoolkit LogAxisVisualHeader",
+  "title": "LogAxisVisualHeader",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.header.LogVisualHeader" },
+    {
+      "properties": {
+        "autolabelrotation": {
+          "description": "automatic label rotation if track is narrow",
+          "label": "Auto Rotate",
+          "id": "/geotoolkit.welllog.header.LogAxisVisualHeader/properties/autolabelrotation",
+          "type": "boolean"
+        },
+        "labelrotationangle": {
+          "description": "optional label rotation angle relative to header",
+          "label": "Rotation Angle",
+          "id": "/geotoolkit.welllog.header.LogAxisVisualHeader/properties/labelrotationangle",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 360,
+          "default": 0
+        },
+        "headertype": {
+          "id": "/geotoolkit.welllog.header.LogAxisVisualHeader/properties/headertype",
+          "label": "Header type",
+          "type": "string",
+          "enum": ["simple", "scale", "range", "fullrange", "custom"]
+        }
+      }
+    }
+  ]
+}

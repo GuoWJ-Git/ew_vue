@@ -1,0 +1,42 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.overlays.Annotation",
+  "description": "The schema describing widget overlay annotation",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.EventDispatcher" },
+    {
+      "properties": {
+        "text": {
+          "id": "/geotoolkit.widgets.overlays.Annotation/properties/text",
+          "type": "string"
+        },
+        "textstyle": {
+            "id": "/geotoolkit.widgets.overlays.Annotation/properties/textstyle",
+            "type": "object",
+            "oneOf": [
+              {"type": "null"},
+              {"$ref": "/geotoolkit.attributes.TextStyle"}
+            ]
+        },
+        "fillstyle": {
+            "id": "/geotoolkit.widgets.overlays.Annotation/properties/fillstyle",
+            "type": "object",
+            "oneOf": [
+              {"type": "null"},
+              {"$ref": "/geotoolkit.attributes.FillStyle"}
+            ]
+        },
+        "linestyle": {
+            "id": "/geotoolkit.widgets.overlays.Annotation/properties/linestyle",
+            "type": "object",
+            "oneOf": [
+              {"type": "null"},
+              {"$ref": "/geotoolkit.attributes.LineStyle"}
+            ]
+        }
+      }
+    }
+  ]
+}
+  

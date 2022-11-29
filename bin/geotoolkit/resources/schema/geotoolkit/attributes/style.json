@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "This document contains a schema describing geotoolkit.attributes.Style",
+  "id": "/geotoolkit.attributes.Style",
+  "title": "Geotoolkit Style Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.EventDispatcher" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.attributes.Style",
+            "id": "/geotoolkit.attributes.Style/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

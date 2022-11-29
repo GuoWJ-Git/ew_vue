@@ -1,0 +1,48 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.attributes.FillStyle",
+  "type": "object",
+  "description": "Schema describing the geotoolkit Fill Style class",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.ColoredStyle" },
+    {
+      "properties": {
+        "pattern": {
+          "id": "/geotoolkit.attributes.FillStyle/properties/pattern",
+          "title": "Pattern",
+          "description": "The pattern that defines the fill. Or a reference to another pattern.",
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "string",
+              "enum": ["None", "Slashes", "Carets", "SlantedBricks", "Bricks", "Dots", "Squiggles", "SquiggleDots"]
+            },
+            {"$ref": "/geotoolkit.attributes.ImagePattern"},
+            {"$ref": "/geotoolkit.attributes.GeometryPattern"}
+          ]
+        },
+        "foreground": {
+          "id": "/geotoolkit.attributes.FillStyle/properties/foreground",
+          "title": "Foreground Color",
+          "description": "The color to fill over the pattern.",
+          "type": "string",
+          "format": "color"
+
+        },
+        "evenoddmode": {
+          "default": false,
+          "id": "/geotoolkit.attributes.FillStyle/properties/evenoddmode",
+          "title": "EvenOdd Mode",
+          "description": "Defines if pattern has to be applied in evenodd mode or nonzero",
+          "type": "boolean"
+        },
+        "ClassName": {
+        "allOf": [{"#ref": "/ClassName"}, {
+          "default": "geotoolkit.attributes.FillStyle",
+          "id": "/geotoolkit.attributes.FillStyle/properties/ClassName"
+        }]
+      }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+	"additionalProperties": true,
+	"description": "This document contains a schema describing geotoolkit.attributes.ImagePattern class instance",
+	"id": "/geotoolkit.attributes.ImagePattern",
+	"title": "Geotoolkit ImagePattern Schema",
+	"type": "object",
+	"allOf": [
+		{ "$ref": "/geotoolkit.attributes.Pattern" },
+		{
+			"properties": {
+				"rawsize": {
+					"default": false,
+					"description": "True to preserve the original size of the image",
+					"id": "/geotoolkit.attributes.ImagePattern/properties/rawsize",
+					"title": "Raw Size",
+					"type": "boolean"
+				},
+				"ClassName": {
+					"allOf": [{"#ref": "/ClassName"}, {
+						"default": "geotoolkit.attributes.ImagePattern",
+						"id": "/geotoolkit.attributes.ImagePattern/properties/ClassName"
+					}]
+				}
+			}
+		}
+	]
+}

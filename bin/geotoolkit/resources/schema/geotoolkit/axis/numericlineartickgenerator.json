@@ -1,0 +1,61 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.NumericLinearTickGenerator",
+  "title": "Numeric Linear Tick Generator Schema",
+  "description": "Schema describing carnac numeric linear tick generator",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.NumericTickGenerator" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.axis.NumericLinearTickGenerator",
+              "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/ClassName"
+            }
+          ]
+        },
+        "majormodelstep": {
+          "default": 0,
+          "description": "The step of major ticks - difference between two adjacent major ticks in model.",
+          "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/majormodelstep",
+          "title": "Major Model Step",
+          "type": "number"
+        },
+        "minormodelstep": {
+          "default": 0,
+          "description": "The step of major ticks - difference between two adjacent minor ticks in model.",
+          "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/minormodelstep",
+          "title": "Minor Model Step",
+          "type": "number"
+        },
+        "offset": {
+          "default": 0,
+          "description": "The offset for the first tick of the tick generator.",
+          "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/offset",
+          "title": "Offset",
+          "type": "number"
+        },
+        "precision": {
+          "default": 9,
+          "description": "Number of digits after the dot in a fraction",
+          "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/precision",
+          "title": "Precision",
+          "type": "integer"
+        },
+        "hidelabelsonspantoosmall": {
+          "default": true,
+          "description": "Flag defining if labels should be filtered automatically if they are overlapped",
+          "enum": [ true, false ],
+          "id": "/geotoolkit.axis.NumericLinearTickGenerator/properties/hidelabelsonspantoosmall",
+          "title": "Hide Labels on Span Too Small",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

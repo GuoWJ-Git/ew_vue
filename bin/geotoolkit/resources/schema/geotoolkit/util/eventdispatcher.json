@@ -1,0 +1,34 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit event dispatcher",
+  "id": "/geotoolkit.util.EventDispatcher",
+  "title": "Event Dispatcher Root Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "links": {
+          "additionalProperties": true,
+          "description": "An object containing the event handlers.",
+          "id": "geotoolkit.util.EventDispatcher/properties/links",
+          "properties": {},
+          "title": "Links",
+          "type": ["object", "null"]
+        },
+        "silent": {
+          "description": "A flag defining if event handlers should be neglected.",
+          "id": "geotoolkit.util.EventDispatcher/properties/silent",
+          "title": "Silent",
+          "type": "boolean"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.EventDispatcher",
+            "id": "/geotoolkit.util.EventDispatcher/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing geotoolkit AGC Trace Processor",
+    "id": "/geotoolkit.seismic.pipeline.processor.AGC",
+    "title": "AGC Trace Processor Root Schema",
+    "type": "object",
+    "allOf": [
+      { "$ref": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor" },
+      {
+        "ClassName": {
+            "allOf": [{"#ref": "/ClassName"}, {
+              "default": "geotoolkit.seismic.pipeline.processor.AGC",
+              "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/ClassName"
+            }]
+        },
+        "properties": {
+          "desiredAverage": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/desiredAverage",
+            "type": "integer"
+          },
+          "units": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/units",
+            "type": "string"
+          },
+          "windowLength": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/windowLength",
+            "type": "integer"
+          },
+          "agcLength": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/agcLength",
+            "type": "integer"
+          },
+          "startSample": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/startSample",
+            "type": "integer"
+          },
+          "step": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/step",
+            "type": "integer"
+          },
+          "noiseReductionPercentage": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/noiseReductionPercentage",
+            "type": "integer"
+          },
+          "noiseReduction": {
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/noiseReduction",
+            "type": "string"
+          }
+        }
+      }
+    ]
+}

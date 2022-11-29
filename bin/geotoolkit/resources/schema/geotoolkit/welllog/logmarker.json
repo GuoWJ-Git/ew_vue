@@ -1,0 +1,124 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogMarker",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.welllog.LogAbstractVisual"
+    },
+    {
+      "properties": {
+        "depth": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/depth",
+          "title": "Depth",
+          "type": "number"
+        },
+        "displaynamelabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/displaynamelabel",
+          "title": "Name label",
+          "type": "string"
+        },
+        "displaydepthlabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/displaydepthlabel",
+          "title": "Depth label",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" }
+          ]
+        },
+        "textstyle": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/textstyle",
+          "title": "Text style",
+          "oneOf": [
+            { "$ref": "/geotoolkit.attributes.TextStyle" },
+            { "type": "null" }
+          ]
+        },
+        "fillstylename": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/fillstylename",
+          "title": "Name fill style",
+          "oneOf": [
+            { "$ref": "/geotoolkit.attributes.FillStyle" },
+            { "type": "null" }
+          ]
+        },
+        "fillstyledepth": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/fillstyledepth",
+          "title": "Depth fill style",
+          "oneOf": [
+            { "$ref": "/geotoolkit.attributes.FillStyle" },
+            { "type": "null" }
+          ]
+        },
+        "visiblenamelabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/visiblenamelabel",
+          "title": "Display name",
+          "type": "boolean"
+        },
+        "visibledepthlabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/visibledepthlabel",
+          "title": "Display depth",
+          "type": "boolean"
+        },
+        "visiblenameborder": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/visiblenameborder",
+          "title": "Display name border",
+          "type": "boolean"
+        },
+        "visibledepthborder": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/visibledepthborder",
+          "title": "Display depth border",
+          "type": "boolean"
+        },
+        "fillnamelabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/fillnamelabel",
+          "title": "Display name fill",
+          "type": "boolean"
+        },
+        "filldepthlabel": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/filldepthlabel",
+          "title": "Display label fill",
+          "type": "boolean"
+        },
+        "namelabelposition": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/namelabelposition",
+          "title": "Label position",
+          "$ref": "/geotoolkit.util.AnchorType"
+        },
+        "depthlabelposition": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/depthlabelposition",
+          "title": "Depth position",
+          "$ref": "/geotoolkit.util.AnchorType"
+        },
+        "textorientation": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/textorientation",
+          "title": "Text orientation",
+          "oneOf": [
+            {
+              "enum": ["vertical", "horizontal"],
+              "type": "string"
+            },
+            { "type": "null" }
+          ]
+
+        },
+        "horizontaltextoffset": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/horizontaltextoffset",
+          "title": "Horizontal text offset",
+          "type": "number"
+        },
+        "verticaltextoffset": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/verticaltextoffset",
+          "title": "Vertical text offset",
+          "type": "number"
+        },
+        "linedecoration": {
+          "id": "/geotoolkit.welllog.LogMarker/properties/linedecoration",
+          "title": "Decoration",
+          "enum": [ "solid", "wavy", "double", "double-wavy"],
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.layout.SizeConstraint",
+    "type": "string",
+    "description": "Schema describing the geotoolkit layout SizeConstraint"
+}

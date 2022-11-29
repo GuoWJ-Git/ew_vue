@@ -1,0 +1,28 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.util.Range",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/EmptyClass"
+    },
+    {
+      "properties": {
+        "high": {
+          "default": 0,
+          "description": "The maximum of the range",
+          "id": "/geotoolkit.util.Range/properties/high",
+          "title": "High",
+          "type": "number"
+        },
+        "low": {
+          "default": 0,
+          "description": "The minimum of the range",
+          "id": "/geotoolkit.util.Range/properties/low",
+          "title": "Low",
+          "type": "number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogReferenceLine",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.welllog.LogPointSet"
+    },
+    {
+      "properties": {
+        "level": {
+          "description": "The level of wrap interpolation",
+          "id": "/geotoolkit.welllog.LogReferenceLine/properties/level",
+          "title": "Level",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"}
+          ]
+        },
+        "value": {
+          "default": 0,
+          "description": "Value in track coordinates",
+          "id": "/geotoolkit.welllog.LogReferenceLine/properties/value",
+          "title": "Line Value",
+          "type": "number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing ColorProvider",
+  "id": "/geotoolkit.util.ColorProvider",
+  "title": "Carnac ColorProvider",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.ColorProvider",
+            "id": "/geotoolkit.util.ColorProvider/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

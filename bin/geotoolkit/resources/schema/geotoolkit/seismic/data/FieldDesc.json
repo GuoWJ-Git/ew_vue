@@ -1,0 +1,30 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.data.FieldDesc",
+    "description": "Schema describing FieldDesc",
+    "title": "FieldDesc Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.seismic.data.FieldDesc",
+                    "id": "/geotoolkit.seismic.data.FieldDesc/properties/ClassName"
+                }
+            ]
+        },
+        "fieldid": {
+            "id": "/geotoolkit.seismic.data.FeildDesc/properties/filedid",
+            "type": "string"
+        },
+        "name": {
+            "id": "/geotoolkit.seismic.data.FeildDesc/properties/name",
+            "type": "string"
+        },
+        "title": {
+            "id": "/geotoolkit.seismic.data.FeildDesc/properties/title",
+            "type": "string"
+        }
+    }
+}

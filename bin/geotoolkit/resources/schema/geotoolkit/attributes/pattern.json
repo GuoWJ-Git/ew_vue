@@ -1,0 +1,55 @@
+{
+  "additionalProperties": true,
+  "description": "This document contains a schema describing geotoolkit.attributes.Pattern class instance",
+  "id": "/geotoolkit.attributes.Pattern",
+  "title": "Geotoolkit Pattern Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.EventDispatcher" },
+    {
+      "properties": {
+        "patternname": {
+          "default": "",
+          "description": "The name of the pattern",
+          "id": "/geotoolkit.attributes.Pattern/properties/patternname",
+          "title": "Name",
+          "type": "string"
+        },
+        "containername": {
+          "default": null,
+          "description": "The name of the container where the to take pattern from",
+          "id": "/geotoolkit.attributes.Pattern/properties/containername",
+          "title": "Container Name",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"}
+          ]
+        },
+        "src": {
+          "description": "The source string of the pattern image. Can be a url or a Base64 string.",
+          "id": "/geotoolkit.attributes.Pattern/properties/src",
+          "title": "Source",
+          "oneOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "alt": {
+          "description": "The alternative text to display if pattern image can not be displayed",
+          "id": "/geotoolkit.attributes.Pattern/properties/alt",
+          "title": "Alt",
+          "oneOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.attributes.Pattern",
+            "id": "/geotoolkit.attributes.Pattern/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

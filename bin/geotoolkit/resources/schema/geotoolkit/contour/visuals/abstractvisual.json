@@ -1,0 +1,33 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.visuals.AbstractVisual",
+    "description": "Schema describing Abstract Visual",
+    "title": "Contour Abstract Visual Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.shapes.Shape"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.visuals.AbstractVisual",
+                            "id": "/geotoolkit.contour.visuals.AbstractVisual/properties/ClassName"
+                        }
+                    ]
+                }
+            },
+            "colormap": {
+                "id": "/geotoolkit.contour.visuals.AbstractVisual/properties/colormap",
+                "descrition": "colormap property description",
+                "$ref": "/geotoolkit.contour.visuals.VisualColorMap"
+            },
+            "colorbehavior": {
+                "id": "/geotoolkit.contour.visuals.AbstractVisual/properties/colorbehavior",
+                "descrition": "colorbehavior property description",
+                "type": "number"
+            }
+        }
+    ]
+}

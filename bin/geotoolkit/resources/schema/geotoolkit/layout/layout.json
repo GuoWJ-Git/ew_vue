@@ -1,0 +1,14 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit layout",
+  "id": "/geotoolkit.layout.Layout",
+  "title": "Carnac Format",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing padding or margin.",
+  "title": "Padding or Margin Schema",
+  "id": "/geotoolkit.attributes.SpaceStyle",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.Style"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.attributes.SpaceStyle",
+            "id": "/geotoolkit.attributes.PaddingStyle/properties/ClassName"
+          }]
+        },
+        "left": {
+          "default": 0,
+          "description": "The left space",
+          "id": "/geotoolkit.attributes.SpaceStyle/properties/left",
+          "title": "left",
+          "oneOf": [
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "right": {
+          "default": 0,
+          "description": "The right space",
+          "id": "/geotoolkit.attributes.SpaceStyle/properties/right",
+          "title": "right",
+          "oneOf": [
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "top": {
+          "default": 0,
+          "description": "The top space",
+          "id": "/geotoolkit.attributes.SpaceStyle/properties/top",
+          "title": "top",
+          "oneOf": [
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "bottom": {
+          "default": 0,
+          "description": "The bottom space",
+          "id": "/geotoolkit.attributes.SpaceStyle/properties/bottom",
+          "title": "bottom",
+          "oneOf": [
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        }        
+      }
+    }
+  ]
+}

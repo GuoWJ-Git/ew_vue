@@ -1,0 +1,10 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogPointSet",
+  "description": "A JSON schema describing abstract log visual",
+  "title": "Abstract Log Visual Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.LogAbstractVisual" }
+  ]
+}

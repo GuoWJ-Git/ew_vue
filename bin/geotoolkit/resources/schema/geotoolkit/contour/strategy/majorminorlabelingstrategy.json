@@ -1,0 +1,80 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy",
+    "description": "Schema describing MajorMinor Labeling Strategy Visual",
+    "title": "Contour Major-Minor Labeling Strategy Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.strategy.MajorMinorLabelingStrategy",
+                            "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/ClassName"
+                        }
+                    ]
+                },
+                "majortextstyle": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majortextstyle",
+                    "$ref": "/geotoolkit.attributes.TextStyle"
+                },
+                "minortextstyle": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minortextstyle",
+                    "$ref": "/geotoolkit.attributes.TextStyle"
+                },
+                "majorusefontcolorforlabels": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorusefontcolorforlabels",
+                    "type": "boolean"
+                },
+                "minorusefontcolorforlabels": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorusefontcolorforlabels",
+                    "type": "boolean"
+                },
+                "majorlabelformat": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorlabelformat",
+                    "$ref": "/geotoolkit.util.NumberFormat"
+                },
+                "minorlabelformat": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorlabelformat",
+                    "$ref": "/geotoolkit.util.NumberFormat"
+                },
+                "majorlabelmargin": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorlabelmargin",
+                    "type": "integer"
+                },
+                "minorlabelmargin": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorlabelmargin",
+                    "type": "integer"
+                },
+                "majorlabelspacing": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorlabelspacing",
+                    "type": "integer"
+                },
+                "minorlabelspacing": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorlabelspacing",
+                    "type": "integer"
+                },
+                "minorstep": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorstep",
+                    "type": "integer"
+                },
+                "majorstep": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorstep",
+                    "type": "integer"
+                },
+                "majorlabelsvisible": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/majorlabelsvisible",
+                    "type": "boolean"
+                },
+                "minorlabelsvisible": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy/properties/minorlabelsvisible",
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LinearValueGrid",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.welllog.LogAbstractVisual"
+    },
+    {
+      "properties": {
+        "linescount": {
+          "description": "Number of lines in the grid",
+          "id": "/geotoolkit.welllog.widgets.LinearValueGrid/properties/linescount",
+          "title": "Number of Lines",
+          "type": "integer"
+        }
+      }
+    }
+  ]
+}

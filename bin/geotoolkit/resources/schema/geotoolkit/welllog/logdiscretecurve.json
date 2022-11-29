@@ -1,0 +1,136 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogDiscreteCurve",
+  "properties": {
+    "displaymode": {
+      "additionalItems": true,
+      "description": "Display mode (any combination of values: 'line' and 'text', or an empty array)",
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/displaymode",
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "enum": ["line", "text"],
+          "description": "Strings defining what to display"
+        }
+      ]
+    },
+    "fillinfo": {
+      "description": "An object containing properties defining the fills of the curve",
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo",
+      "title": "Fill Info",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/type",
+              "description": "The type of the fill",
+              "title": "Type",
+              "minimum": 0,
+              "maximum": 2,
+              "type": "integer"
+            },
+            "codes": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/codes",
+              "description": "Code by which the fill style for the section is assigned",
+              "title": "Codes",
+              "items": {
+                "type": "number"
+              },
+              "type": "array",
+              "uniqueItems": false
+            },
+            "names": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/names",
+              "description": "Names of the fills",
+              "title": "Names",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "fillstyles": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/fillstyles",
+              "description": "The fill styles to apply",
+              "title": "Fillstyles",
+              "items": {
+                "$ref": "/geotoolkit.attributes.FillStyle"
+              },
+              "type": "array"
+            },
+            "ranges": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/ranges",
+              "description": "List of ranges to color of fill",
+              "title": "Ranges",
+              "items": {
+                "description": "Each range is defined by an array containing two numbers: start and end",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "type": "array"
+            },
+            "colorprovider": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/colorprovider",
+              "description": "A class which is able to provide the color for requested value",
+              "title": "Color Provider",
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "/geotoolkit.util.ColorProvider"}
+              ]
+            },
+            "defaultfillstyle": {
+              "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/fillinfo/properties/defaultfillstyle",
+              "description": "The fill style to apply if a fill style for the region is not specified in the arrays",
+              "title": "Default Fillstyle",
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "/geotoolkit.attributes.FillStyle"}
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "filltype": {
+      "default": 1,
+      "description": "An enum that defines the type of fill mechanism which is used to fill the curve.",
+      "maximum": 2,
+      "minimum": 0,
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/filltype",
+      "title": "Fill Type",
+      "type": "integer"
+    },
+    "textstyle": {
+      "additionalProperties": true,
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/textstyle",
+      "description": "The style of the text drawn over the fills",
+      "title": "Test Style",
+      "oneOf": [
+        {"$ref": "/geotoolkit.attributes.TextStyle"}
+      ]
+    },
+    "textposition": {
+      "default": 5,
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/textposition",
+      "description": "The position of the fill label",
+      "title": "Text Position",
+      "oneOf": [
+        {"$ref": "/geotoolkit.util.AnchorType"}
+      ]
+    },
+    "interpolationtype": {
+      "default": "StartStep",
+      "description": "An enum defining the type of algorithm used to interpolate the fills",
+      "id": "/geotoolkit.welllog.LogDiscreteCurve/properties/interpolationtype",
+      "title": "Interpolation Type",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

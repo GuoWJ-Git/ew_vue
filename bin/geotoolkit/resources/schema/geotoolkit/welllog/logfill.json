@@ -1,0 +1,73 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogFill",
+  "title": "Log Fill",
+  "description": "Schema describing the class which handles filling in between curves",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.welllog.LogPointSet"
+    },
+    {
+      "properties": {
+        "curve1": {
+          "description": "A curve or a reference to a curve to fill from",
+          "id": "/geotoolkit.welllog.LogFill/properties/curve1",
+          "title": "Curve 1",
+          "anyOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.welllog.LogReferenceLine"},
+            {"$ref": "/geotoolkit.welllog.LogCurve"}
+          ]
+        },
+        "curve2": {
+          "description": "A curve or a reference to a curve to fill to",
+          "id": "/geotoolkit.welllog.LogFill/properties/curve2",
+          "title": "Curve 2",
+          "anyOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.welllog.LogReferenceLine"},
+            {"$ref": "/geotoolkit.welllog.LogCurve"}
+          ]
+        },
+        "fillstyle": {
+          "id": "/geotoolkit.welllog.LogFill/properties/fillstyle",
+          "description": "The style of the fill applied in between curves, or a reference to a style",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"},
+            {"$ref": "/geotoolkit.attributes.FillStyle"}
+          ]
+        },
+        "filltype": {
+          "default": "right",
+          "description": "The type of the fill to apply",
+          "id": "/geotoolkit.welllog.LogFill/properties/filltype",
+          "enum": ["single", "dual", "positive", "negative", "positiveandnegative", "left", "right", "leftandright"],
+          "title": "Fill type",
+          "type": "string"
+        },
+        "negativefillstyle": {
+          "description": "The style style of the negative fill",
+          "id": "/geotoolkit.welllog.LogFill/properties/negativefillstyle",
+          "title": "The Negative Fill Style",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"},
+            {"$ref": "/geotoolkit.attributes.FillStyle"}
+          ]
+        },
+        "positivefillstyle": {
+          "description": "The style style of the positive fill",
+          "id": "/geotoolkit.welllog.LogFill/properties/positivefillstyle",
+          "title": "The Positive Fill Style",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"},
+            {"$ref": "/geotoolkit.attributes.FillStyle"}
+          ]
+        }
+      }
+    }
+  ]
+}

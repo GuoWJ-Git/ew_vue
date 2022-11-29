@@ -1,0 +1,40 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy",
+    "description": "Schema describing Single Isoline Styling Strategy Visual",
+    "title": "Contour Single Isolines Styling Strategy Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.strategy.IsolineStylingStrategy" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.strategy.SingleIsolineStylingStrategy",
+                            "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy/properties/ClassName"
+                        }
+                    ]
+                },
+                "singlelinestyle": {
+                    "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy/properties/singleisolinestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "commonisolinestyle": {
+                    "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy/properties/commonisolinestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "singleisolinevisible": {
+                    "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy/properties/singleisolinevisible",
+                    "type": "boolean"
+                },
+                "singleisolinelevel": {
+                    "id": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy/properties/singleisolinelevel",
+                    "type": "integer"
+                }
+            }
+        }
+    ]
+    
+}

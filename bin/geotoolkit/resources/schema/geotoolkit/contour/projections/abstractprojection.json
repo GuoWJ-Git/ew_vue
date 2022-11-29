@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.projections.AbstractProjection",
+    "description": "Schema describing Abstract Projection",
+    "title": "Contour Abstract Projection Schema",
+    "type": "object"
+}

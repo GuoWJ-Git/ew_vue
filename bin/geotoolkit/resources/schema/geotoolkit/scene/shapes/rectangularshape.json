@@ -1,0 +1,32 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.scene.shapes.RectangularShape",
+  "description": "This schema describes Carnac Rectangular Shape base class",
+  "title": "Carnac Rectangular Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.shapes.ScaledShape" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.shapes.RectangularShape",
+              "id": "/geotoolkit.scene.shapes.RectangularShape/properties/ClassName"
+            }
+          ]
+        },
+        "bounds": {
+          "id": "/geotoolkit.scene.shapes.RectangularShape/properties/bounds",
+          "description": "The bounds of rectangle shape",
+          "title": "Bounds",
+          "oneOf": [
+            {"$ref": "/geotoolkit.util.Rect"},
+            {"type": "null"}
+          ]
+        }
+      }
+    }
+  ]
+}

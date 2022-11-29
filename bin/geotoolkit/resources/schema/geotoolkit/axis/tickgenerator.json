@@ -1,0 +1,307 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.TickGenerator",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.TickGenerator",
+              "id": "/geotoolkit.axis.TickGenerator/properties/ClassName"
+            }
+          ]
+        },
+        "labelangles": {
+          "id": "/geotoolkit.axis.TickGenerator/properties/labelangles",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "title": "Major Label Rotation Angle",
+              "description": "The angle by which the major labels should be rotated",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelangles/properties/major",
+              "oneOf": [
+                {"type": "null"},
+                {"type": "number"}
+              ]
+            },
+            "MINOR": {
+              "title": "Major Label Rotation Angle",
+              "description": "The angle by which the minor labels should be rotated",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelangles/properties/minor",
+              "oneOf": [
+                {"type": "null"},
+                {"type": "number"}
+              ]
+            },
+            "EDGE": {
+              "title": "Major Label Rotation Angle",
+              "description": "The angle by which the edge labels should be rotated",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelangles/properties/edge",
+              "oneOf": [
+                {"type": "null"},
+                {"type": "number"}
+              ]
+            },
+            "INTERMEDIATE": {
+              "title": "Intermediate Label Rotation Angle",
+              "description": "The angle by which the intermediate labels should be rotated",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelangles/properties/intermediate",
+              "oneOf": [
+                {"type": "null"},
+                {"type": "number"}
+              ]
+            }
+          }
+        },
+        "labelstyles": {
+          "id": "/geotoolkit.axis.TickGenerator/properties/labelstyles",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "title": "Major Label Style",
+              "description": "Major tick labels' text style",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelstyles/properties/major",
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "/geotoolkit.attributes.TextStyle"}
+              ]
+            },
+            "MINOR": {
+              "title": "Minor Label Style",
+              "description": "Minor tick labels' text style",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelstyles/properties/minor",
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "/geotoolkit.attributes.TextStyle"}
+              ]
+            },
+            "EDGE": {
+              "title": "Edge Label Style",
+              "description": "Edge tick labels' text style",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelstyles/properties/edge",
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "/geotoolkit.attributes.TextStyle"}
+              ]
+            },
+            "INTERMEDIATE": {
+              "title": "Intermediate Label Style",
+              "description": "Intermediate tick label's style",
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelstyles/properties/intermediate",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.attributes.TextStyle" }
+              ]
+            }
+          }
+        },
+        "logscale": {
+          "default": false,
+          "description": "Defines if the tick generator is logarithmic",
+          "id": "/geotoolkit.axis.TickGenerator/properties/logscale",
+          "title": "Logarithmic",
+          "type": "boolean"
+        },
+        "tag": {
+          "id": "/geotoolkit.axis.TickGenerator/properties/tag",
+          "description": "User specified additional info about this object",
+          "title": "Tag",
+          "oneOf": [
+            { "type": "null" },
+            { "type": "object" },
+            { "type": "string" },
+            { "type": "number" }
+          ]
+        },
+        "tickstyles": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.axis.TickGenerator/properties/tickstyles",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "title": "Major Tick Style",
+              "description": "The line style of major ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/tickstyles/properties/MAJOR",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.attributes.LineStyle" }
+              ]
+            },
+            "MINOR": {
+              "title": "Minor Tick Style",
+              "description": "The line style of minor ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/tickstyles/properties/MINOR",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.attributes.LineStyle" }
+              ]
+            },
+            "EDGE": {
+              "title": "Edge Tick Style",
+              "description": "The line style of edge ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/tickstyles/properties/EDGE",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.attributes.LineStyle" }
+              ]
+            },
+            "INTERMEDIATE": {
+              "title": "Intermediate Tick Style",
+              "description": "The line style of intermediate ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/tickstyles/properties/intermediate",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.attributes.LineStyle" }
+              ]
+            }
+          }
+        },
+        "visiblelabels": {
+          "description": "Contains labels which should be visible",
+          "title": "Visible Labels",
+          "id": "/geotoolkit.axis.TickGenerator/properties/visiblelabels",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "default": true,
+              "title": "Major Label Visible",
+              "description": "The visibility flag for major labels.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visiblelabels/properties/MAJOR",
+              "type": "boolean"
+            },
+            "MINOR": {
+              "default": false,
+              "title": "Minor Label Visible",
+              "description": "The visibility flag for minor labels.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visiblelabels/properties/MINOR",
+              "type": "boolean"
+            },
+            "EDGE": {
+              "default": true,
+              "title": "Edge Label Visible",
+              "description": "The visibility flag for edge labels.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visiblelabels/properties/EDGE",
+              "type": "boolean"
+            },
+            "INTERMEDIATE": {
+              "default": true,
+              "title": "Intermediate Label Visible",
+              "description": "The visibility flag for Intermediate labels.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visiblelabels/properties/INTERMEDIATE",
+              "type": "boolean"
+            }
+          }
+        },
+        "visibleticks": {
+          "description": "Contains ticks which should be visible",
+          "title": "Visible Ticks",
+          "id": "/geotoolkit.axis.TickGenerator/properties/visibleticks",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "default": true,
+              "title": "Major Ticks Visible",
+              "description": "The visibility flag for major ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visibleticks/properties/major",
+              "type": "boolean"
+            },
+            "MINOR": {
+              "default": true,
+              "title": "Minor Ticks Visible",
+              "description": "The visibility flag for minor ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visibleticks/properties/minor",
+              "type": "boolean"
+            },
+            "EDGE": {
+              "default": true,
+              "title": "Edge Ticks Visible",
+              "description": "The visibility flag for edge ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visibleticks/properties/edge",
+              "type": "boolean"
+            },
+            "INTERMEDIATE": {
+              "default": true,
+              "title": "Intermediate Ticks Visible",
+              "description": "The visibility flag for intermediate ticks.",
+              "id": "/geotoolkit.axis.TickGenerator/properties/visibleticks/properties/intermediate",
+              "type": "boolean"
+            }
+          }
+        },
+        "ticksizes": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.axis.TickGenerator/properties/ticksizes",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/ticksizes/properties/major",
+              "oneOf": [
+                { "type": "null" },
+                { "type": "integer" }
+              ]
+            },
+            "MINOR": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/ticksizes/properties/minor",
+              "oneOf": [
+                { "type": "null" },
+                { "type": "integer" }
+              ]
+            },
+            "EDGE": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/ticksizes/properties/edge",
+              "oneOf": [
+                { "type": "null" },
+                { "type": "integer" }
+              ]
+            },
+            "INTERMEDIATE": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/ticksizes/properties/intermediate",
+              "oneOf": [
+                { "type": "null" },
+                { "type": "integer" }
+              ]
+            }
+          }
+        },
+        "labelanchortypes": {
+          "id": "/geotoolkit.axis.TickGenerator/properties/labelanchortypes",
+          "type": "object",
+          "properties": {
+            "MAJOR": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelanchortypes/properties/major",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.util.AnchorType" }
+              ]
+            },
+            "MINOR": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelanchortypes/properties/minor",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.util.AnchorType" }
+              ]
+            },
+            "EDGE": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelanchortypes/properties/edge",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.util.AnchorType" }
+              ]
+            },
+            "INTERMEDIATE": {
+              "id": "/geotoolkit.axis.TickGenerator/properties/labelanchortypes/properties/intermediate",
+              "oneOf": [
+                { "type": "null" },
+                { "$ref": "/geotoolkit.util.AnchorType" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

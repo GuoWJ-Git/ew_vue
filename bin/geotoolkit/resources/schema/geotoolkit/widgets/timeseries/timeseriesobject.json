@@ -1,0 +1,66 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject",
+  "description": "Schema describing Carnac TimeSeriesObject",
+  "title": "TimeSeriesObject Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase"},
+    {
+      "properties": {
+        "curve": {
+          "description": "Curve properties",
+          "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "description": "Curve properties",
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties",
+              "type": "object",
+              "properties": {
+                "logarithmicscale": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/logarithmicscale",
+                  "type": "boolean"
+                },
+                "autoscale": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/autoscale",
+                  "type": "boolean"
+                },
+                "max": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/max",
+                  "type": "number"
+                },
+                "min": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/min",
+                  "type": "number"
+                },
+                "visible": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/visible",
+                  "type": "boolean"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/curve/properties/properties/properties/linestyle",
+                  "title": "Line Style",
+                  "oneOf": [
+                    {
+                      "$ref": "/geotoolkit.attributes.LineStyle"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.timeseries.TimeSeriesObject",
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObject/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

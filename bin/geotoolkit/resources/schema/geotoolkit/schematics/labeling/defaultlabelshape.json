@@ -1,0 +1,63 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.DefaultLabelShape",
+  "description": "Schema describing Default Label Shape",
+  "title": "Default Label Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.DefaultLabelShape",
+              "id": "/geotoolkit.schematics.labeling.DefaultLabelShape/properties/ClassName"
+            }
+          ]
+        },
+        "labelshape": {
+          "type": "object",
+          "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape",
+          "properties": {
+            "linestyle": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/linestyle",
+              "$ref": "/geotoolkit.attributes.LineStyle"
+            },
+            "fillstyle": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/fillstyle",
+              "$ref": "/geotoolkit.attributes.FillStyle"
+            }
+          }
+        },
+        "padding": {
+          "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/padding",
+          "type": "object",
+          "properties": {
+            "left": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/padding/left",
+              "type": "integer"
+            },
+            "right": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/padding/right",
+              "type": "integer"
+            },
+            "top": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/padding/top",
+              "type": "integer"
+            },
+            "bottom": {
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/padding/bottom",
+              "type": "integer"
+            }
+          }
+        },
+        "labeltextstyle": {
+          "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/labelshape/properties/labeltextstyle",
+          "$ref": "/geotoolkit.attributes.TextStyle"
+        }
+      }
+    }
+  ]
+}

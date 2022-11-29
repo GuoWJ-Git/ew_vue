@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.LabelingStrategyBase",
+  "description": "Schema describing Labeling Strategy Base",
+  "title": "Labeling Strategy Base Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.schematics.labeling.LabelingStrategy"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.LabelingStrategyBase",
+              "id": "/geotoolkit.schematics.labeling.LabelingStrategyBase/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

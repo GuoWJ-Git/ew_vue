@@ -1,0 +1,156 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget",
+    "description": "Schema describing MultiLateral Schematics Widget",
+    "title": "Multilateral Schematics Widget Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.widgets.AnnotatedWidget" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.schematics.widgets.MultiLateralSchematicsWidget",
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/ClassName"
+                        }
+                    ]
+                },
+                "annotationssizes": {
+                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/annotationssizes",
+                    "anyOf": [
+                        { "type": "null" },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "east": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/annotationssizes/properties/east",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "south": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/annotationssizes/properties/south",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "west": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/annotationssizes/properties/west",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "north": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/annotationssizes/properties/north",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+
+                },
+                "wellborenode": {
+                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode",
+                    "type": "object",
+                    "properties": {
+                        "sparse": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/sparse",
+                            "type": "object",
+                            "properties": {
+                                "on": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/sparse/properties/on",
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "trackwidth": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trackwidth",
+                            "type": "integer"
+                        },
+                        "trajectory": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory",
+                            "type": "object",
+                            "properties": {
+                                "branching": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/branching",
+                                    "type": "object",
+                                    "properties": {
+                                        "visible": {
+                                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/branching/properties/visible",
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "lines": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/lines",
+                                    "type": "object",
+                                    "properties": {
+                                        "visible": {
+                                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/lines/properties/visible",
+                                            "type": "boolean"
+                                        },
+                                        "linestyle": {
+                                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/lines/properties/linestyle",
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "stations": {
+                                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/stations",
+                                    "type": "object",
+                                    "properties": {
+                                        "visible": {
+                                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/stations/properties/visible",
+                                            "type": "boolean"
+                                        },
+                                        "linestyle": {
+                                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/trajectory/properties/stations/properties/linestyle",
+                                            "type": "string",
+                                            "format": "color"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "viewmode": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/wellborenode/properties/viewmode",
+                            "type": "integer"
+                        }
+                    }
+
+                },
+                "scalesratiomode": {
+                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/scalesratiomode",
+                    "type": "string"
+
+                },
+                "sealevel": {
+                    "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/sealevel",
+                    "type": "object",
+                    "properties": {
+                        "depth": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/sealevel/properties/depth",
+                            "type": "integer"
+                        },
+                        "visible": {
+                            "id": "/geotoolkit.schematics.widgets.MultiLateralSchematicsWidget/properties/sealevel/properties/visible",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

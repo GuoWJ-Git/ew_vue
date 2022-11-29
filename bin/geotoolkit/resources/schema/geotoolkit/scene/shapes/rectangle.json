@@ -1,0 +1,27 @@
+{
+    "additionalProperties": true,
+    "description": "This schema describes Carnac Rectangle Shape.",
+    "id": "/geotoolkit.scene.shapes.Rectangle",
+    "title": "Carnac Rectangle Shape Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.shapes.RectangularShape" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [{"#ref": "/ClassName"}, {
+                        "default": "geotoolkit.scene.shapes.Rectangle",
+                        "id": "/geotoolkit.scene.shapes.Rectangle/properties/ClassName"
+                    }]
+                },
+                "radius": {
+                    "default": 0,
+                    "type": "number",
+                    "id": "/geotoolkit.scene.shapes.Rectangle/properties/radius",
+                    "description": "The corner radius of the rectangle",
+                    "title": "Corner Radius"
+                }
+            }
+        }
+    ]
+}

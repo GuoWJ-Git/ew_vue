@@ -1,0 +1,21 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing geotoolkit AutoNumberFormat",
+    "id": "/geotoolkit.util.AutoNumberFormat",
+    "title": "Carnac AutoNumberFormat",
+    "type": "object",
+    "allOf": [
+      { "$ref": "/geotoolkit.util.NumberFormat" },
+      {
+        "properties": {
+          "ClassName": {
+            "allOf": [{"#ref": "/ClassName"}, {
+              "default": "geotoolkit.util.AutoNumberFormat",
+              "id": "/geotoolkit.util.AutoNumberFormat/properties/ClassName"
+            }]
+          }
+        }
+      }
+    ]
+  }
+  

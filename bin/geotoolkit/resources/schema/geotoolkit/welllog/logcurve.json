@@ -1,0 +1,179 @@
+  {
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogCurve",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.LogPointSet" },
+    {
+      "properties": {
+        "barlinestyle": {
+          "description": "Bar Line Description. TODO: fix this description",
+          "id": "/geotoolkit.welllog.LogCurve/properties/barlinestyle",
+          "title": "Bar Line Style",
+          "oneOf": [
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "null" }
+          ]
+        },
+        "centeronzeroonnegativemin": {
+          "default": true,
+          "description": "TODO: Write a description",
+          "enum": [ false, true ],
+          "id": "/geotoolkit.welllog.LogCurve/properties/centeronzeroonnegativemin",
+          "title": "Neat Log Limits",
+          "type": "boolean"
+        },
+        "displaymode": {
+          "description": "TODO: Write a description",
+          "title": "Display Mode",
+          "id": "/geotoolkit.welllog.LogCurve/properties/displaymode",
+          "items": {
+            "description": "The display mode identifier",
+            "title": "Display Mode Item",
+            "enum": [ "line", "symbol", "value", "bar", "fill" ],
+            "type": "string"
+          },
+          "additionalItems": false,
+          "type": "array",
+          "uniqueItems": false
+        },
+        "displayunit": {
+          "description": "The unit of measure displayed for the curve",
+          "id": "/geotoolkit.welllog.LogCurve/properties/displayunit",
+          "title": "Display Unit",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.util.Unit"}
+          ]
+        },
+        "gradientlinestyle": {
+          "description": "The gradient if applied to the curve",
+          "id": "/geotoolkit.welllog.LogCurve/properties/gradientlinestyle",
+          "title": "Gradient Line Style",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.welllog.attributes.LogGradientStyle"}
+          ]
+        },
+        "interpolationtype": {
+          "default": "Linear",
+          "description": "The type of interpolation applied to the curve",
+          "enum": ["Linear","MiddleStep","EndStep","StartStep"],
+          "id": "/geotoolkit.welllog.LogCurve/properties/interpolationtype",
+          "title": "Interpolationtype",
+          "type": "string"
+        },
+        "limitstype": {
+          "default": 0,
+          "description": "The type of limits used when calculating the limits",
+          "id": "/geotoolkit.welllog.LogCurve/properties/limitstype",
+          "minimum": 0,
+          "maximum": 2,
+          "title": "Type of Limits",
+          "type": "integer"
+        },
+        "logscale": {
+          "default": false,
+          "description": "Logarithmic scale on or off",
+          "id": "/geotoolkit.welllog.LogCurve/properties/logscale",
+          "title": "Logarithmic Scale",
+          "type": "boolean"
+        },
+        "scaletype": {
+          "default": "Linear",
+          "description": "The type of scale applied to the curve values",
+          "enum": ["Linear", "Logarithmic", "Tangential"],
+          "id": "/geotoolkit.welllog.LogCurve/properties/scaletype",
+          "title": "Scale Type",
+          "type": "string"
+        },
+        "maxwraps": {
+          "default": 5,
+          "description": "Maximum count of wraps",
+          "id": "/geotoolkit.welllog.LogCurve/properties/maxwraps",
+          "title": "Maximum Wraps",
+          "type": "integer"
+        },
+        "microposleft": {
+          "default": 0,
+          "description": "allows application code to display the curve in a subarea of the track",
+          "id": "/geotoolkit.welllog.LogCurve/properties/microposleft",
+          "minimum": 0,
+          "maximum": 1,
+          "title": "Micro Position Left",
+          "type": "number"
+        },
+        "microposright": {
+          "default": 1,
+          "description": "allows application code to display the curve in a subarea of the track",
+          "id": "/geotoolkit.welllog.LogCurve/properties/microposright",
+          "minimum": 0,
+          "maximum": 1,
+          "title": "Micro Position Right",
+          "type": "number"
+        },
+        "nullvaluesymbolvisible": {
+          "default": false,
+          "description": "Flag to change visibility of null value symbol",
+          "id": "/geotoolkit.welllog.LogCurve/properties/nullvaluesymbolvisible",
+          "title": "Null Value Symbol Visible",
+          "type": "boolean"
+        },
+        "outofrangevalues": {
+          "default": false,
+          "description": "Display out of range values flag",
+          "id": "/geotoolkit.welllog.LogCurve/properties/outofrangevalues",
+          "title": "The Out of Range Values",
+          "type": "boolean"
+        },
+        "symboldecimationstep": {
+          "default": 1,
+          "description": "The step of decimation of symbols",
+          "id": "/geotoolkit.welllog.LogCurve/properties/symboldecimationstep",
+          "title": "Symbol Decimation Step",
+          "type": "number"
+        },
+        "textdecimationstep": {
+          "default": 1,
+          "description": "The step of decimation of displayed text",
+          "id": "/geotoolkit.welllog.LogCurve/properties/textdecimationstep",
+          "title": "Text Decimation Step",
+          "type": "integer"
+        },
+        "textreference": {
+          "default": "sample",
+          "description": "Type of the text to be put on the track",
+          "enum": ["track","sample"],
+          "id": "/geotoolkit.welllog.LogCurve/properties/textreference",
+          "title": "Text Reference",
+          "type": "string"
+        },
+        "textstyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.welllog.LogCurve/properties/textstyle",
+          "description": "The styling of the text on the curve",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.attributes.TextStyle"}
+          ]
+        },
+        "symbol": {
+          "additionalProperties": true,
+          "title": "Marker properties",
+          "id": "/geotoolkit.welllog.LogCurve/properties/symbol",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.scene.shapes.SymbolShape"}
+          ]
+        },
+        "wrapping": {
+          "default": false,
+          "description": "Flag to enable wrapping based on if you want to see the clipped part of the track or not",
+          "id": "/geotoolkit.welllog.LogCurve/properties/wrapping",
+          "title": "Wrapping",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

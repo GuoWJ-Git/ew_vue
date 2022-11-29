@@ -1,0 +1,10 @@
+{
+    "additionalProperties": true,
+    "title": "Abstract unit",
+    "description": "An enum defining all types of anchors supported by carnac",
+    "id": "/geotoolkit.util.AbstractUnit",
+    "type": "object",
+    "properties": {
+        
+    }
+}

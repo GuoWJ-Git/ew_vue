@@ -1,0 +1,58 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.NumericTickGenerator",
+  "description": "The schema describing carnac numeric tick generator.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.TickGenerator" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.NumericTickGenerator",
+              "id": "/geotoolkit.axis.NumericTickGenerator/properties/ClassName"
+            }
+          ]
+        },
+        "formatlabeleventhandler": {
+          "description": "Serialized handler function which is called to specify format of the label",
+          "id": "/geotoolkit.axis.NumericTickGenerator/properties/formatlabeleventhandler",
+          "title": "Format Label Event Handler",
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string" }
+          ]
+        },
+        "EDGE": {
+          "description": "Number formatting of the edge labels.",
+          "id": "/geotoolkit.axis.NumericTickGenerator/properties/edge",
+          "type": "object",
+          "properties": {
+            "labelformat": {
+              "id": "/geotoolkit.axis.NumericTickGenerator/properties/edge/properties/labelformat",
+              "$ref": "/geotoolkit.util.NumberFormat"
+            }
+          }
+        },
+        "MAJOR": {
+          "description": "Number formatting of the major labels.",
+          "id": "/geotoolkit.axis.NumericTickGenerator/properties/major",
+          "labelformat": {
+            "id": "/geotoolkit.axis.NumericTickGenerator/properties/major/properties/labelformat",
+            "$ref": "/geotoolkit.util.AutoNumberFormat"
+          }
+        },
+        "MINOR": {
+          "description": "Number formatting of the minor labels.",
+          "id": "/geotoolkit.axis.NumericTickGenerator/properties/minor",
+          "labelformat": {
+            "id": "/geotoolkit.axis.NumericTickGenerator/properties/minor/properties/labelformat",
+            "$ref": "/geotoolkit.util.NumberFormat"
+          }
+        }
+      }
+    }
+  ]
+}

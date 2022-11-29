@@ -1,0 +1,49 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy",
+    "description": "Schema describing MajorMinor Isoline Styling Strategy Visual",
+    "title": "Contour Major-Minor Isolines Styling Strategy Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.strategy.IsolineStylingStrategy" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy",
+                            "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/ClassName"
+                        }
+                    ]
+                },
+                "majorlinestyle": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/majorlinestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+
+                },
+                "minorlinestyle": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/minorlinestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "majorstep": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/majorstep",
+                    "type": "integer"
+                },
+                "minorstep": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/minorstep",
+                    "type": "integer"
+                },
+                "majorisolinevisible": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/majorisolinevisible",
+                    "type": "boolean"
+                },
+                "minorisolinevisible": {
+                    "id": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy/properties/minorisolinevisible",
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+    
+}

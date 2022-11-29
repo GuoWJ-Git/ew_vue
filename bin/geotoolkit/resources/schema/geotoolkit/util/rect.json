@@ -1,0 +1,50 @@
+{
+  "additionalProperties": true,
+  "description": "This schema describes a geotoolkit Rect instance",
+  "id": "/geotoolkit.util.Rect",
+  "title": "Rect Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.Area" },
+    {
+      "properties": {
+        "height": {
+          "description": "The height of the rectangle.",
+          "id": "/geotoolkit.util.Rect/properties/height",
+          "title": "Height",
+          "type": "integer"
+        },
+        "readOnly": {
+          "description": "Read only flag. Defines if the rect is locked to mutations.",
+          "id": "/geotoolkit.util.Rect/properties/readOnly",
+          "title": "Read Only",
+          "type": "boolean"
+        },
+        "width": {
+          "description": "The width of the Rect instance",
+          "id": "/geotoolkit.util.Rect/properties/width",
+          "title": "Width",
+          "type": "integer"
+        },
+        "x": {
+          "description": "X coordinate of left top corner",
+          "id": "/geotoolkit.util.Rect/properties/x",
+          "title": "X Coordinate",
+          "type": "integer"
+        },
+        "y": {
+          "description": "Y coordinate of left top corner",
+          "id": "/geotoolkit.util.Rect/properties/y",
+          "title": "Y Coordinate",
+          "type": "integer"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Rect",
+            "id": "/geotoolkit.util.Rect/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

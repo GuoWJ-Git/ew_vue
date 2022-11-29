@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.datasource.AbstractContourDataSource",
+    "description": "Schema describing Contour Abstract Datasource",
+    "title": "Contour Abstract Datasource Schema",
+    "type": "object"
+}

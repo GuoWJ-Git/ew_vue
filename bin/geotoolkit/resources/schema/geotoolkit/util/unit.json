@@ -1,0 +1,78 @@
+{
+  "additionalProperties": true,
+  "description": "This schema describes a geotoolkit Unit instance",
+  "title": "Unit Schema",
+  "id": "/geotoolkit.util.Unit",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "name": {
+          "description": "The name of the unit",
+          "id": "/geotoolkit.util.Unit/properties/name",
+          "title": "Name",
+          "type": "string"
+        },
+        "quantitytype": {
+          "type": "array",
+          "description": "Represents the type of the unit",
+          "id": "/geotoolkit.util.Unit/properties/quantitytype",
+          "items": [
+            {"type": "string"}
+          ],
+          "additionalItems": false
+        },
+        "symbol": {
+          "description": "The symbol string representing the unit.",
+          "id": "/geotoolkit.util.Unit/properties/symbol",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "baseunitsymbol": {
+          "description": "The symbol string representing the baseunit.",
+          "id": "/geotoolkit.util.Unit/properties/baseunitsymbol",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "a": {
+          "description": "One of the factors used to convert a unit into the base unit",
+          "id": "geotoolkit.util.Unit/properties/a",
+          "title": "A factor",
+          "type": "number"
+        },
+        "b": {
+          "description": "One of the factors used to convert a unit into the base unit",
+          "id": "geotoolkit.util.Unit/properties/b",
+          "title": "B factor",
+          "type": "number"
+        },
+        "c": {
+          "description": "One of the factors used to convert a unit into the base unit",
+          "id": "geotoolkit.util.Unit/properties/c",
+          "title": "C factor",
+          "type": "number"
+        },
+        "d": {
+          "description": "One of the factors used to convert a unit into the base unit",
+          "id": "geotoolkit.util.Unit/properties/d",
+          "title": "D factor",
+          "type": "number"
+        },
+        "description": {
+          "default": "",
+          "description": "The readable description of the unit.",
+          "id": "geotoolkit.util.Unit/properties/description",
+          "title": "Description",
+          "type": "string"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Unit",
+            "id": "/geotoolkit.util.Unit/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

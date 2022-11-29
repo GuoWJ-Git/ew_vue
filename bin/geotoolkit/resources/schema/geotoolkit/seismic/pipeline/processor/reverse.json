@@ -1,0 +1,28 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing geotoolkit Reverse Trace Processor",
+    "id": "/geotoolkit.seismic.pipeline.processor.Reverse",
+    "title": "Reverse Trace Processor Root Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor" },
+        {
+            "ClassName": {
+                "allOf": [{"#ref": "/ClassName"}, {
+                    "default": "geotoolkit.seismic.pipeline.processor.Reverse",
+                    "id": "/geotoolkit.seismic.pipeline.processor.Reverse/properties/ClassName"
+                }]
+            },
+            "properties": {
+                "reversed": {
+                    "id": "/geotoolkit.seismic.pipeline.processor.Reverse/properties/reversed",
+                    "type": "boolean"
+                },
+                "inverted": {
+                    "id": "/geotoolkit.seismic.pipeline.processor.Reverse/properties/inverted",
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+}

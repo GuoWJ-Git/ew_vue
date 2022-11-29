@@ -1,0 +1,70 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.attributes.LineStyle",
+  "type": "object",
+  "description": "Schema describing the geotoolkit Line Style class",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.ColoredStyle" },
+    {
+      "properties": {
+        "width": {
+          "default": 1,
+          "id": "/geotoolkit.attributes.LineStyle/properties/width",
+          "title": "Width",
+          "description": "The width of the line.",
+          "type": "integer"
+        },
+        "pattern": {
+          "id": "/geotoolkit.attributes.LineStyle/properties/pattern",
+          "title": "Pattern",
+          "description": "The pattern of the line",
+          "enum": ["Solid", "Dash", "Dot", "DashDot", "ShortDash", "LongDash", "DashDotDot", "DashLongDash"]
+        },
+        "pixelsnapmode": {
+          "id": "/geotoolkit.attributes.LineStyle/properties/pixelsnapmode",
+          "title": "Pixel Snap Mode",
+          "description": "The pixes snapping mode for x and y components",
+          "oneOf": [{
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "boolean",
+                "description": "The pixel snapping along x axis",
+                "default": false,
+                "id": "/geotoolkit.attributes.LineStyle/properties/pixelsnapmode/properties/x"
+              },
+              "y": {
+                "type": "boolean",
+                "description": "The pixel snapping along y axis",
+                "default": false,
+                "id": "/geotoolkit.attributes.LineStyle/properties/pixelsnapmode/properties/y"
+              }
+            }
+          }, {"type": "string", "memento": true}]
+        },
+        "linejoin": {
+          "default": "round",
+          "id": "/geotoolkit.attributes.LineStyle/properties/linejoin",
+          "title": "Line Join",
+          "enum": ["round", "mitter", "square"],
+          "description": "The shape formed on the joins of the lines",
+          "type": "string"
+        },
+        "linecap": {
+          "default": "round",
+          "id": "/geotoolkit.attributes.LineStyle/properties/linecap",
+          "title": "Line Cap",
+          "enum": ["butt","round","square"],
+          "description": "The shape formed on the edges of the lines",
+          "type": "string"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "defaullt": "geotoolkit.attributes.LineStyle",
+            "id": "/geotoolkit.attributes.LineStyle/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

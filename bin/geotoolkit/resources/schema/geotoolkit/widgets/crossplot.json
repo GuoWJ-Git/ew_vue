@@ -1,0 +1,159 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.CrossPlot",
+  "description": "Schema describing Carnac CrossPlot Widget",
+  "title": "CrossPlot Widget Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.AnnotatedWidget"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.CrossPlot",
+              "id": "/geotoolkit.widgets.CrossPlot/properties/ClassName"
+            }
+          ]
+        },
+        "x": {
+          "id": "/geotoolkit.widgets.CrossPlot/properties/x",
+          "type": "object",
+          "properties": {
+            "label": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/label",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/label/properties/text",
+                  "type": "string"
+                },
+                "textstyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/label/properties/textstyle",
+                  "$ref": "/geotoolkit.attributes.TextStyle"
+                }
+              }
+            },
+            "logarithmic": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/logarithmic",
+              "type": "boolean"
+            },
+            "autominmax": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/autominmax",
+              "type": "boolean"
+            },
+            "min": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/min",
+              "type": "number"
+            },
+            "max": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/max",
+              "type": "number"
+            },
+            "histogram": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/histogram",
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/histogram/properties/visible",
+                  "type": "boolean"
+                },
+                "fillstyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/histogram/properties/fillstyle",
+                  "$ref": "/geotoolkit.attributes.FillStyle"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/histogram/properties/linestyle",
+                  "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "bins": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/x/properties/histogram/properties/bins",
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "y": {
+          "id": "/geotoolkit.widgets.CrossPlot/properties/y",
+          "type": "object",
+          "properties": {
+            "label": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/label",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/label/properties/text",
+                  "type": "string"
+                },
+                "textstyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/label/properties/textstyle",
+                  "$ref": "/geotoolkit.attributes.TextStyle"
+                }
+              }
+            },
+            "logarithmic": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/logarithmic",
+              "type": "boolean"
+            },
+            "autominmax": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/autominmax",
+              "type": "boolean"
+            },
+            "min": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/min",
+              "type": "number"
+            },
+            "max": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/max",
+              "type": "number"
+            },
+            "histogram": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/histogram",
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/histogram/properties/visible",
+                  "type": "boolean"
+                },
+                "fillstyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/histogram/properties/fillstyle",
+                  "$ref": "/geotoolkit.attributes.FillStyle"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/histogram/properties/linestyle",
+                  "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "bins": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/y/properties/histogram/properties/bins",
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "z": {
+          "id": "/geotoolkit.widgets.CrossPlot/properties/z",
+          "type": "object",
+          "properties": {
+            "label": {
+              "id": "/geotoolkit.widgets.CrossPlot/properties/z/properties/label",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/z/properties/label/properties/text",
+                  "type": "string"
+                },
+                "textstyle": {
+                  "id": "/geotoolkit.widgets.CrossPlot/properties/z/properties/label/properties/textstyle",
+                  "$ref": "/geotoolkit.attributes.TextStyle"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
