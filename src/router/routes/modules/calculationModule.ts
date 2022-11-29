@@ -26,12 +26,12 @@ const dashboard: AppRouteModule[] = [
             meta: { title: '实物测定法', icon: 'el-icon-lock' },
             component: PhysicalDetermination,
           },
-          {
-            path: 'pump-jetting',
-            name: 'PumpJetting',
-            meta: { title: '泵冲法', icon: 'el-icon-lock' },
-            component: PumpJetting,
-          },
+          // {
+          //   path: 'pump-jetting',
+          //   name: 'PumpJetting',
+          //   meta: { title: '泵冲法', icon: 'el-icon-lock' },
+          //   component: PumpJetting,
+          // },
         ],
       },
     ],
