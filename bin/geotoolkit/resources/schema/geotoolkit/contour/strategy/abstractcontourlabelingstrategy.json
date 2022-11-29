@@ -1,0 +1,38 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy",
+    "description": "Schema describing Abstract Contour Labeling Strategy",
+    "title": "Contour Abstract Contour Labeling Strategy Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.contour.strategy.AbstractContourLabelingStrategy",
+                    "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/ClassName"
+                }
+            ]
+        },
+        "textstyle": {
+            "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/textstyle",
+            "$ref": "/geotoolkit.attributes.TextStyle"
+        },
+        "labelspacing": {
+            "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/labelspacing",
+            "type": "integer"
+        },
+        "labelmargin": {
+            "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/labelmargin",
+            "type": "integer"
+        },
+        "usefontcolorforlabels": {
+            "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/usefontcolorforlabels",
+            "type": "boolean"
+        },
+        "labelformat": {
+            "id": "/geotoolkit.contour.strategy.AbstractContourLabelingStrategy/properties/labelformat",
+            "$ref": "/geotoolkit.util.NumberFormat"
+        }
+    }
+}

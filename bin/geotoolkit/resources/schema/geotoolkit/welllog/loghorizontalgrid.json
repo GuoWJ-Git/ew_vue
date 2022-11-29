@@ -1,0 +1,40 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogHorizontalGrid",
+  "properties": {
+    "majorlinestyle": {
+      "description": "The line style of the major ticks of the grid, or a reference to another line style",
+      "id": "/geotoolkit.welllog.LogHorizontalGrid/properties/majorlinestyle",
+      "title": "Major Line Style",
+      "oneOf": [
+        {"$ref": "/geotoolkit.attributes.LineStyle"},
+        {"type": "string"}
+      ]
+    },
+    "minorlinestyle": {
+      "description": "The line style of the minor ticks of the grid, or a reference to another line style",
+      "id": "/geotoolkit.welllog.LogHorizontalGrid/properties/minorlinestyle",
+      "title": "Minor Line Style",
+      "oneOf": [
+        {"$ref": "/geotoolkit.attributes.LineStyle"},
+        {"type": "string"}
+      ]
+    },
+    "tickgenerator": {
+      "id": "/geotoolkit.welllog.LogHorizontalGrid/properties/tickgenerator",
+      "title": "Tick Generator",
+      "description": "Used to calculate major and minor lines positions",
+      "anyOf": [
+        { "$ref": "/geotoolkit.axis.AdaptiveTickGenerator" },
+        { "$ref": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator" },
+        { "$ref": "/geotoolkit.axis.AdaptiveLogTickGenerator" },
+        { "$ref": "/geotoolkit.axis.DateTimeTickGenerator" },
+        { "$ref": "/geotoolkit.axis.DiscreteValueTickGenerator" },
+        { "$ref": "/geotoolkit.axis.NumericLinearTickGenerator" },
+        { "$ref": "/geotoolkit.axis.NumericTickGenerator" },
+        { "$ref": "/geotoolkit.axis.SecondaryTickGenerator" }
+      ]
+    }
+  },
+  "type": "object"
+}

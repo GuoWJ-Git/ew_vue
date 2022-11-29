@@ -1,0 +1,18 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.scale.ContourScale",
+    "description": "Schema describing Contour Scale",
+    "title": "Contour Scale Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.contour.scale.ContourScale",
+                    "id": "/geotoolkit.contour.scale.ContourScale/properties/ClassName"
+                }
+            ]
+        }
+    }
+}

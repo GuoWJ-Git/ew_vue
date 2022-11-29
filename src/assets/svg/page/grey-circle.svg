@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>椭圆形复制 13</title>
+    <defs>
+        <linearGradient x1="83.6974559%" y1="91.82438%" x2="10.1038998%" y2="11.5039988%" id="linearGradient-1">
+            <stop stop-color="#F3F6FB" offset="0%"></stop>
+            <stop stop-color="#BCCAE2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="总页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="审批-签署" transform="translate(-1568.000000, -282.000000)" fill="url(#linearGradient-1)" stroke="#C7D6EB">
+            <circle id="椭圆形复制-13" transform="translate(1577.000000, 291.500000) rotate(-270.000000) translate(-1577.000000, -291.500000) " cx="1577" cy="291.5" r="8.5"></circle>
+        </g>
+    </g>
+</svg>

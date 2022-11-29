@@ -1,0 +1,18 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.data.TraceMapping",
+    "description": "Schema describing Seismic trace mapping",
+    "title": "TraceMapping Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.seismic.data.TraceMapping",
+                    "id": "/geotoolkit.seismic.data.TraceMapping/properties/ClassName"
+                }
+            ]
+        }
+    }
+}

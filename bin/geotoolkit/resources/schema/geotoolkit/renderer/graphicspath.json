@@ -1,0 +1,64 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing the Graphics Path class of carnac renderer",
+  "id": "/geotoolkit.renderer.GraphicsPath",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "bounds": {
+          "default": null,
+          "description": "The bounds of this path",
+          "id": "/geotoolkit.renderer.GraphicsPath/properties/bounds",
+          "title": "Bounds",
+          "oneOf": [
+            {"$ref": "/geotoolkit.util.Rect"},
+            {"type": "null"}
+          ]
+        },
+        "index": {
+          "additionalItems": false,
+          "id": "/geotoolkit.renderer.GraphicsPath/properties/index",
+          "type": "array",
+          "title": "Index Array",
+          "uniqueItems": false
+        },
+        "tags": {
+          "id": "/geotoolkit.renderer.GraphicsPath/properties/tags",
+          "title": "Tags Array",
+          "type": "array",
+          "additionalItems": false,
+          "uniqueItems": false,
+          "items": [
+            {"type": "integer"}
+          ]
+        },
+        "x": {
+          "id": "/geotoolkit.renderer.GraphicsPath/properties/x",
+          "additionalItems": false,
+          "uniqueItems": false,
+          "items": [{"type": "number"}],
+          "type": "array",
+          "description": "An array containing x coordinates of points defining the geometry",
+          "title": "X Coordinates"
+        },
+        "y": {
+          "id": "/geotoolkit.renderer.GraphicsPath/properties/y",
+          "additionalItems": false,
+          "uniqueItems": false,
+          "items": [{"type": "number"}],
+          "type": "array",
+          "description": "An array containing y coordinates of points defining the geometry",
+          "title": "Y Coordinates"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.renderer.GraphicsPath",
+            "id": "/geotoolkit.renderer.GraphicsPath/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

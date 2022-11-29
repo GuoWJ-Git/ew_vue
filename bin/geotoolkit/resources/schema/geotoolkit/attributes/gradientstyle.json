@@ -1,0 +1,80 @@
+{
+  "additionalProperties": true,
+  "type": "object",
+  "id": "/geotoolkit.attributes.GradientStyle",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.FillStyle" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            { "#ref": "/ClassName" },
+            {
+              "default": "geotoolkit.attributes.GradientStyle",
+              "id": "/geotoolkit.attributes.GradientStyle/properties/ClassName"
+            }
+          ]
+        },
+        "absolutecoordinates": {
+          "default": false,
+          "description": "Defines if the start and end points of the gradiens should be calculated relative to the bounds of the object it fills or the whole scene.",
+          "id": "/geotoolkit.attributes.GradientStyle/properties/absolutecoordinates",
+          "title": "Absolute Coordinates",
+          "type": "boolean"
+        },
+        "spreadmethod": {
+          "default": "pad",
+          "description": "Defines how the gradient behaves when vector defined by start and end does not cover the entire object.",
+          "enum": [ "reflect","repeat","pad" ],
+          "id": "/geotoolkit.attributes.GradientStyle/properties/spreadmethod",
+          "title": "Spread Method",
+          "type": "string"
+        },
+        "stoppoints": {
+          "additionalItems": true,
+          "id": "/geotoolkit.attributes.GradientStyle/properties/stoppoints",
+          "description": "An array of color stop points containing positions and colors",
+          "title": "Stop Points",
+          "items": {
+            "type": "object",
+            "description": "An object containing properties of the color stop",
+            "properties": {
+              "position": {
+                "label": "Stop Position",
+                "description": "The position of the color stop in the model limits of the shape that the gradient is filling, which is always [0,1]",
+                "type": "number"
+              },
+              "color": {
+                "label": "Stop Color",
+                "description": "The color of the color stop.",
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "/geotoolkit.util.RgbaColor" }
+                ]
+              }
+            }
+          },
+          "type": "array",
+          "uniqueItems": false
+        },
+        "transformation": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.attributes.GradientStyle/properties/transformation",
+          "description": "The transformation of the gradient vector",
+          "title": "Transformation",
+          "oneOf": [
+            { "$ref": "/geotoolkit.util.Transformation" }
+          ]
+        },
+        "unittype": {
+          "default": "objectBoundingBox",
+          "description": "Defines how the points defining the vector are being calculated. UserSpaceOnUse is equivalent to absolute coordinates.",
+          "enum": [ "userSpaceOnUse", "objectBoundingBox" ],
+          "id": "/geotoolkit.attributes.GradientStyle/properties/unittype",
+          "title": "Unit Type",
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

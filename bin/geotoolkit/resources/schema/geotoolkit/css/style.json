@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit css style attribute",
+  "id": "/geotoolkit.css.CssStyle",
+  "title": "CSS Style Root Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.css.CssStyle",
+            "id": "/geotoolkit.css.CssStyle/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "additionalProperties": true,
+  "description": "Describes a base for every other schema. Describes an object returned when serializing a geotoolkit class which does not return any properties.",
+  "id": "/EmptyClass",
+  "title": "Empty Class Schema",
+  "type": "object",
+  "properties": {
+    "mementoId": {
+      "default": 0,
+      "description": "Utility property used for serialization. Should not be used anywhere else.",
+      "id": "/EmptyClass/properties/mementoId",
+      "title": "Memento ID",
+      "type": "integer"
+    }
+  }
+}

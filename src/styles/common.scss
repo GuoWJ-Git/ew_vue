@@ -1,0 +1,97 @@
+/* 全局可用class */
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.flex-justify-center {
+  @include flexRow(center, stretch);
+}
+
+.flex-justify-around {
+  @include flexRow(space-around, stretch);
+}
+
+.flex-justify-between {
+  @include flexRow(space-between, stretch);
+}
+
+.border-left {
+  border-left: $border;
+}
+
+.border-right {
+  border-right: $border;
+}
+
+.border-top {
+  border-top: $border;
+}
+
+.border-bottom {
+  border-bottom: $border;
+}
+
+.default-table {
+  th {
+    padding: 16px 0 !important;
+  }
+
+  td {
+    padding: 12px 0 !important;
+  }
+}
+
+.medium-table {
+  th {
+    padding: 10px 0 !important;
+  }
+
+  td {
+    padding: 6px 0 !important;
+  }
+}
+
+.compact-table {
+  th {
+    padding: 0 !important;
+  }
+
+  td {
+    padding: 0 !important;
+  }
+}
+
+.discolor-dialog {
+  background-color: #ebeef5;
+  border-radius: 10px !important;
+
+  .el-dialog__header {
+    padding: 15px 20px !important;
+
+    .el-dialog__title {
+      font-weight: bold;
+    }
+
+    .el-dialog__headerbtn {
+      top: 15px;
+
+      .el-dialog__close {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 10px !important;
+  }
+}
+
+.custom-tooltip {
+  max-width: 300px;
+
+  &-text {
+    @include textOverflowEllipsis();
+  }
+}

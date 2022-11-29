@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.grid.ContourAbstractGrid",
+    "description": "Schema describing Contour Abstract Grid",
+    "title": "Contour Abstract Grid Schema",
+    "type": "object"
+}

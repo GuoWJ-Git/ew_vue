@@ -1,0 +1,118 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.scene.shapes.AnchoredShape",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.shapes.Shape" },
+    {
+    "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.shapes.AnchoredShape",
+              "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/ClassName"
+            }
+          ]
+        },
+        "alignment": {
+          "default": 5,
+          "description": "The point on the shape by which it is aligned.",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/alignment",
+          "title": "Alignment",
+          "oneOf": [
+            {"$ref": "/geotoolkit.util.AnchorType"}
+          ]
+        },
+        "ax": {
+          "default": 0,
+          "description": "The x component of the anchor point coordinate",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/ax",
+          "title": "Anchor X",
+          "type": "number"
+        },
+        "ay": {
+          "default": 0,
+          "description": "The Y component of the anchor point coordinate",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/ay",
+          "title": "Anchor Y",
+          "type": "integer"
+        },
+        "width": {
+          "default": 0,
+          "description": "The width of the shape",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/width",
+          "title": "Width",
+          "type": "number"
+        },
+        "height": {
+          "default": 0,
+          "description": "The height of the shape",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/height",
+          "title": "Height",
+          "type": "number"
+        },
+        "ispointingup": {
+          "default": false,
+          "description": "Defines if the shape is pointing up",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/ispointingup",
+          "title": "Is Pointing Up",
+          "type": "boolean"
+        },
+        "maxdimension": {
+          "description": "Maximum device space size",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/maxdimension",
+          "title": "Max Dimension",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.util.Dimension"}
+          ]
+        },
+        "mindimension": {
+          "description": "Minimum device space size",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/mindimension",
+          "title": "Min dimension",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.util.Dimension"}
+          ]
+        },
+        "preserveaspectratio": {
+          "default": false,
+          "description": "Boolean defining if aspect ratio has to be preserved at all times",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/preserveaspectratio",
+          "title": "Preserve Aspect Ratio",
+          "type": "boolean"
+        },
+        "preservereadingorientation": {
+          "default": false,
+          "description": "Flag defining if the shape has to be in reading orientation at all times",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/preservereadingorientation",
+          "title": "Preserve Reading Orientation",
+          "type": "boolean"
+        },
+        "preserverightangle": {
+          "default": false,
+          "description": "Preserve right angle for local transformation",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/preserverightangle",
+          "title": "Preserve Right Angle",
+          "type": "boolean"
+        },
+        "sizeisindevicespace": {
+          "default": false,
+          "description": "Defines if the size of the shape is calculated in device model",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/sizeisindevicespace",
+          "title": "Size is in Device Space",
+          "type": "boolean"
+        },
+        "useminmaxdimensions": {
+          "default": false,
+          "description": "Flag defining if the shape has to be clipped by max and min dimensions (if specified)",
+          "id": "/geotoolkit.scene.shapes.AnchoredShape/properties/useminmaxdimensions",
+          "title": "Use Min Max Dimensions",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

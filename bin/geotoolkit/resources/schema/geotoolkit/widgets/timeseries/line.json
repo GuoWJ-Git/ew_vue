@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.timeseries.TimeSeriesLine",
+  "description": "Schema describing Carnac TimeSeries Line",
+  "title": "TimeSeries Line Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.timeseries.TimeSeriesShape"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.timeseries.TimeSeriesLine",
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesLine/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

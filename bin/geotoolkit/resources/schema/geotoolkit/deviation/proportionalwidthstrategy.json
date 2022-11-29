@@ -1,0 +1,35 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.deviation.ProportionalWidthStrategy",
+  "description": "Schema describing Proportional Width Strategy",
+  "title": "Proportional Width Strategy Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.deviation.ProportionalWidthStrategy",
+              "id": "/geotoolkit.deviation.ProportionalWidthStrategy/properties/ClassName"
+            }
+          ]
+        },
+        "minwidth": {
+          "id": "/geotoolkit.deviation.ProportionalWidthStrategy/properties/minwidth",
+          "type": "integer"
+        },
+        "maxwidth": {
+          "id": "/geotoolkit.deviation.ProportionalWidthStrategy/properties/maxwidth",
+          "type": "integer"
+        },
+        "widthscale": {
+          "id": "/geotoolkit.deviation.ProportionalWidthStrategy/properties/widthscale",
+          "type": "integer"
+        }
+      }
+    }
+  ]
+}

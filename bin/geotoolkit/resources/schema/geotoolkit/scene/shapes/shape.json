@@ -1,0 +1,41 @@
+{
+  "additionalProperties": true,
+  "description": "This schema describes Carnac Shape.",
+  "id": "/geotoolkit.scene.shapes.Shape",
+  "title": "Carnac Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.AbstractNode" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.shapes.Shape",
+              "id": "/geotoolkit.scene.shapes.Shape/properties/ClassName"
+            }
+          ]
+        },
+        "fillstyle": {
+          "description": "The shape fill properties",
+          "id": "/geotoolkit.scene.shapes.Shape/properties/fillstyle",
+          "title": "Fill Style",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.attributes.FillStyle"}
+          ]
+        },
+        "linestyle": {
+          "description": "The shape line properties",
+          "id": "/geotoolkit.scene.shapes.Shape/properties/linestyle",
+          "title": "Line Style",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.attributes.LineStyle"}
+          ]
+        }
+      }
+    }
+  ]
+}

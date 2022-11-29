@@ -1,0 +1,101 @@
+:root {
+  --systemThemeColor: #0960bd;
+  --systemThemeColorActive: #e7eaf6;
+  --navbarThemeColor: #fff;
+  --navbarColor: #000000d9;
+  --sidebarColor: #ffffffb3;
+  --sidebarThemeColor: #001529;
+  --sidebarThemeColorActive: #0960bd;
+  --sidebarThemeGroup: #444b51;
+  --sidebarThemeBg: #001529;
+  --contentBgColor: #e7eaf6;
+  --border-color: #f0f0f0;
+  --el-border-color-base: #dcdfe6;
+  --app-container-bg-color: #fff;
+  --marginWidth: 1rem;
+  --paddingWidth: 1rem;
+  --logo-width: 280px;
+  --tabs-height: 30px;
+  --svg-width: 32px;
+  --layout-header-height: 72px;
+  --layout-footer-height: 40px;
+  --layout-container-margin: 10px;
+  --layout-container-padding: 10px;
+  --point-card-container-margin: 10px;
+  --point-card-container-padding: 10px;
+  --layout-content-height: calc(
+    100vh - var(--layout-header-height) - var(--layout-footer-height) - var(--tabs-height)
+  );
+}
+
+.night-mode {
+  --navbarThemeColor: #1f1f1f;
+  --navbarColor: #fff;
+  --sidebarThemeColor: #1f1f1f;
+  --contentBgColor: #000;
+  --border-color: #303030;
+  --el-border-color-base: #303030;
+  --el-border-color-light: #303030;
+  --app-container-bg-color: #303030;
+}
+
+$systemTheme: var(--systemThemeColor);
+$systemThemeActive: var(--systemThemeColorActive);
+
+$navbarColor: var(--navbarColor);
+$navbarTheme: var(--navbarThemeColor);
+
+$sidebarColor: var(--sidebarColor);
+$sidebarTheme: var(--sidebarThemeColor);
+$sidebarThemeActive: var(--sidebarThemeColorActive);
+$sidebarThemeGroup: var(--sidebarThemeGroup);
+$sidebarThemeBg: var(--sidebarThemeBg);
+
+$contentBgColor: var(--contentBgColor);
+
+$borderColor: var(--border-color);
+$border: 1px solid $borderColor;
+
+$headerHeight: var(--layout-header-height);
+$logoWidth: var(--logo-width);
+$tabsHeight: var(--tabs-height);
+$svgWidth: var(--svg-width);
+
+$marginWidth: var(--marginWidth);
+$paddingWidth: var(--paddingWidth);
+@media screen and(max-width: 1000px) {
+  :root {
+    --marginWidth: 10px;
+    --paddingWidth: 10px;
+  }
+}
+
+// Extra small screen / phone
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+
+// Small screen / tablet
+$screen-sm: 576px;
+$screen-sm-min: $screen-sm;
+
+// Medium screen / desktop
+$screen-md: 768px;
+$screen-md-min: $screen-md;
+
+// Large screen / wide desktop
+$screen-lg: 992px;
+$screen-lg-min: $screen-lg;
+
+// Extra large screen / full hd
+$screen-xl: 1200px;
+$screen-xl-min: $screen-xl;
+
+// Extra extra large screen / large desktop
+$screen-2xl: 1600px;
+$screen-2xl-min: $screen-2xl;
+
+$screen-xs-max: ($screen-sm-min - 1px);
+$screen-sm-max: ($screen-md-min - 1px);
+$screen-md-max: ($screen-lg-min - 1px);
+$screen-lg-max: ($screen-xl-min - 1px);
+$screen-xl-max: ($screen-2xl-min - 1px);

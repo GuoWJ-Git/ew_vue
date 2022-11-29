@@ -1,0 +1,98 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.scene.Group",
+  "description": "Schema describing Carnac Group",
+  "title": "Group Node Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.CompositeNode"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.Group",
+              "id": "/geotoolkit.scene.Group/properties/ClassName"
+            }
+          ]
+        },
+        "bounds": {
+          "id": "/geotoolkit.scene.Group/properties/bounds",
+          "description": "The bounds of Group",
+          "title": "Bounds",
+          "oneOf": [
+            {"$ref": "/geotoolkit.util.Rect"},
+            {"type": "null"}
+          ]
+        },
+        "limits": {
+          "id": "/geotoolkit.scene.Group/properties/limits",
+          "description": "The model limits of Group",
+          "title": "Limits",
+          "oneOf": [
+            {"$ref": "/geotoolkit.util.Rect"},
+            {"type": "null"}
+          ]
+        },
+        "verticalflip": {
+          "id": "/geotoolkit.scene.Group/properties/verticalflip",
+          "description": "A flag defining whether to enable vertical flipping or not",
+          "title": "Enable Vertical Flipping",
+          "type": "boolean",
+          "default": false
+        },
+        "horizontalflip": {
+          "id": "/geotoolkit.scene.Group/properties/horizontalflip",
+          "description": "A flag defining whether to enable horizontal flipping or not",
+          "title": "Enable Horizontal Flipping",
+          "type": "boolean",
+          "default": false
+        },
+        "pickingchildren": {
+          "id": "/geotoolkit.scene.Group/properties/pickingchildren",
+          "description": "A flag defining whether to enable picking children or not",
+          "title": "Enable Picking Children",
+          "type": "boolean",
+          "default": true
+        },
+        "layoutstyle": {
+          "id": "/geotoolkit.scene.Group/properties/layoutstyle",
+          "description": "Layout Style",
+          "title": "LayoutStyle",
+          "oneOf": [
+            {"$ref": "/geotoolkit.layout.LayoutStyle"},
+            {"type": "null"}
+          ]
+        },
+        "layout": {
+          "description": "Group layout",
+          "id": "/geotoolkit.scene.Group/properties/layout",
+          "title": "Layout",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.layout.Layout"}
+          ]
+        },
+        "fillstyle": {
+          "description": "The background",
+          "id": "/geotoolkit.scene.Group/properties/fillstyle",
+          "title": "Fill Style",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.attributes.FillStyle"}
+          ]
+        },
+        "linestyle": {
+          "description": "The group border properties",
+          "id": "/geotoolkit.scene.Group/properties/linestyle",
+          "title": "Line Style",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.attributes.LineStyle"}
+          ]
+        }
+      }
+    }
+  ]
+}

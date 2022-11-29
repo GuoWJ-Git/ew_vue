@@ -1,0 +1,19 @@
+{
+  "description": "The base schema for all welllog classes",
+  "id": "/EmptyWellLogSchema",
+  "type": "object",
+  "properties": {
+    "cg_id": {
+      "description": "The id used strictly for deserialization",
+      "id": "/geotoolkit.welllog.LogCurve/properties/cg_id",
+      "title": "CG Id",
+      "type": "integer"
+    },
+    "cg_type": {
+      "description": "The type of the instance",
+      "id": "/geotoolkit.welllog.LogCurve/properties/cg_type",
+      "title": "CG Type",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.controls.tools.AbstractTool",
+    "description": "Schema describing Carnac Abstract tool",
+    "title": "AbstractTool Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.controls.tools.AbstractTool",
+                    "id": "/geotoolkit.controls.tools.AbstractTool/properties/ClassName"
+                }
+            ]
+        }
+    }
+}

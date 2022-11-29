@@ -1,0 +1,86 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.LogLog10ValueGrid",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.welllog.LogAbstractVisual"
+    },
+    {
+      "properties": {
+        "decadecount": {
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/decadecount",
+          "title": "Decade Count",
+          "description": "Number of decades displayed",
+           "oneOf": [
+               {"type": "null"},
+               {"type": "number"}
+           ]
+        },
+        "scale": {
+          "default": 1,
+          "description": "The scale factor of the grid",
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/scale",
+          "title": "Scale",
+            "oneOf": [
+                {"type": "null"},
+                {"type": "number"}
+            ]
+        },
+        "offset": {
+          "default": 0,
+          "description": "The offset of the grid from the base line",
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/offset",
+          "title": "Offset",
+          "oneOf": [
+              {"type": "null"},
+              {"type": "number"}
+          ]
+        },
+        "step": {
+          "description": "An explanation about the purpose of this instance.",
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/step",
+          "title": "The Step Schema",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"}
+          ]
+        },
+       "logstart": {
+           "description": "An optional start grid value.",
+           "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/logstart",
+           "title": "The Log Start Schema",
+           "oneOf": [
+               {"type": "null"},
+               {"type": "number"}
+           ]
+        },
+        "logstop": {
+           "description": "An optional stop grid value.",
+           "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/logstop",
+           "title": "The Log Stop Schema",
+           "oneOf": [
+               {"type": "null"},
+               {"type": "number"}
+           ]
+        },
+        "bounds": {
+          "description": "Bounds of the visual in parent coordinates",
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/bounds",
+          "title": "The Bounds Schema",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "/geotoolkit.util.Rect"}
+          ]
+        },
+        "intermediate": {
+          "default": true,
+          "description": "Flag defining the visibility of minor lines in the grid",
+          "id": "/geotoolkit.welllog.LogLog10ValueGrid/properties/intermediate",
+          "title": "Intermediate Lines",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

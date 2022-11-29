@@ -1,0 +1,59 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.attributes.LogGradientStyle",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.attributes.FillStyle"
+    },
+    {
+      "properties": {
+        "colorprovider": {
+          "default": null,
+          "id": "/geotoolkit.welllog.attributes.LogGradientStyle/properties/colorprovider",
+          "title": "Color Provider",
+          "description": "The class which provides the color related to a value.",
+          "oneOf": [
+            { "$ref": "/geotoolkit.util.ColorProvider" },
+            { "type": "null" }
+          ]
+        },
+        "renderbackground": {
+          "default": false,
+          "id": "/geotoolkit.welllog.attributes.LogGradientStyle/properties/renderbackground",
+          "title": "Render Background",
+          "description": "Defines if the background must be rendered before the gradient fill is rendered",
+          "type": "boolean"
+        },
+        "transparency": {
+          "id": "/geotoolkit.welllog.attributes.LogGradientStyle/properties/transparency",
+          "title": "Transparency",
+          "description": "The opacity index of the gradient fill",
+          "minimum": 0,
+          "maximum": 255,
+          "type": "number"
+        },
+        "datasource": {
+          "default": null,
+          "id": "/geotoolkit.welllog.attributes.LogGradientStyle/properties/datasource",
+          "title": "Data Source",
+          "description": "The class providing data for the log curve",
+          "oneOf": [
+            {"type": "null"},
+            { "$ref": "/geotoolkit.welllog.data.LogData" }
+          ]
+        },
+        "colorrange": {
+          "default": null,
+          "id": "/geotoolkit.welllog.attributes.LogGradientStyle/properties/colorrange",
+          "title": "Color Range",
+          "description": "The range of colors described by the gradient.",
+          "oneOf": [
+            {"type": "null"},
+            { "$ref": "/geotoolkit.util.Range" }
+          ]
+        }
+      }
+    }
+  ]
+}

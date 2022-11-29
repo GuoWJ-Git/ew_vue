@@ -1,0 +1,41 @@
+{
+  "additionalProperties": true,
+  "description": "The schema describing the welllog track",
+  "id": "/geotoolkit.welllog.LogTrack",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.CompositeNode"},
+    {
+      "properties": {
+        "cg_id": {
+          "description": "Incremental ID used for serialization only",
+          "id": "/geotoolkit.welllog.LogTrack/properties/cg_id",
+          "title": "CG ID",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Name of the track.",
+          "id": "/geotoolkit.welllog.LogTrack/properties/name",
+          "title": "Name",
+          "type": "string"
+        },
+        "type": {
+          "default": "index",
+          "description": "The type of track.",
+          "enum": [
+            null,
+            "index"
+          ],
+          "id": "/geotoolkit.welllog.LogTrack/properties/type",
+          "title": "The Type Schema",
+          "type": "string"
+        },
+        "calculated": {
+          "description": "Placeholder for calculated properties",
+          "id": "/geotoolkit.welllog.LogTrack/properties/calculated",
+          "type": "object"
+        }
+      }
+    }
+  ]
+}

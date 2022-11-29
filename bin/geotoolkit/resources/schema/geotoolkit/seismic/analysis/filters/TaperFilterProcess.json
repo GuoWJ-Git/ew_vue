@@ -1,0 +1,44 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing geotoolkit Taper Filter Processor",
+    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess",
+    "title": "TaperFilter Processor Root Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor" },
+        {
+            "ClassName": {
+                "allOf": [{"#ref": "/ClassName"}, {
+                    "default": "geotoolkit.seismic.analysis.filters.TaperFilterProcess",
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/ClassName"
+                }]
+            },
+            "properties": {
+                "sampleRate": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/sampleRate",
+                    "type": "integer"
+                },
+                "passFlag": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/passFlag",
+                    "type": "boolean"
+                },
+                "f1": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f1",
+                    "type": "number"
+                },
+                "f2": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f2",
+                    "type": "number"
+                },
+                "f3": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f3",
+                    "type": "number"
+                },
+                "f4": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f4",
+                    "type": "number"
+                }
+            }
+        }
+    ]
+}

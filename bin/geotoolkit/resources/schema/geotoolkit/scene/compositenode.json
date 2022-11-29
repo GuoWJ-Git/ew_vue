@@ -1,0 +1,38 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.scene.CompositeNode",
+  "description": "Schema describing carnac Composite Node",
+  "title": "Composite Node Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.AbstractNode"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.CompositeNode",
+              "id": "/geotoolkit.scene.CompositeNode/properties/ClassName"
+            }
+          ]
+        },
+        "children": {
+          "type": "array",
+          "id": "/geotoolkit.scene.CompositeNode/properties/children",
+          "description": "An array containing any carnac node",
+          "title": "Children",
+          "items": {
+            "type": "object"
+          }
+        },
+        "clipping": {
+          "id": "/geotoolkit.scene.CompositeNode/properties/clipping",
+          "description": "A flag defining whether to enable clipping or not",
+          "title": "Enable Clipping",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.strategy.IsolineStylingStrategy",
+    "description": "Schema describing Isoline Styling Strategy Visual",
+    "title": "Contour Isolines Styling Strategy Schema",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "allOf": [
+                {"#ref": "/ClassName"},
+                {
+                    "default": "geotoolkit.contour.strategy.IsolineStylingStrategy",
+                    "id": "/geotoolkit.contour.strategy.IsolineStylingStrategy/properties/ClassName"
+                }
+            ]
+        }
+    }
+}

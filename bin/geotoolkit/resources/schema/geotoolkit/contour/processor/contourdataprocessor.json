@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.processor.ContourDataProcessor",
+    "description": "Schema describing Contour Data Processor",
+    "title": "Contour Data Processor Schema",
+    "type": "object"
+}

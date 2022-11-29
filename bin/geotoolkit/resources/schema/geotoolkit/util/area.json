@@ -1,0 +1,20 @@
+{
+  "additionalProperties": true,
+  "description": "This schema describes a geotoolkit Rect instance",
+  "id": "/geotoolkit.util.Area",
+  "title": "Area Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Area",
+            "id": "/geotoolkit.util.Area/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

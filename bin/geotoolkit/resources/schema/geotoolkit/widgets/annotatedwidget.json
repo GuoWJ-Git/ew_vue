@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.AnnotatedWidget",
+  "description": "Schema describing Carnac Annotated Widget",
+  "title": "Annotated Widget Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.BaseWidget"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.AnnotatedWidget",
+              "id": "/geotoolkit.widgets.AnnotatedWidget/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

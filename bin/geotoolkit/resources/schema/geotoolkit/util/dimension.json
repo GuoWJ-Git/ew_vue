@@ -1,0 +1,36 @@
+{
+  "additionalProperties": true,
+  "description": "DSchema describing carnac dimension class",
+  "title": "Dimansion Schema",
+  "id": "/geotoolkit.util.Dimension",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Dimension",
+            "id": "/geotoolkit.util.Dimension/properties/ClassName"
+          }]
+        },
+        "height": {
+          "default": 0,
+          "description": "The height of the dimension",
+          "minimum": 0,
+          "id": "/geotoolkit.util.Dimension/properties/height",
+          "title": "Height",
+          "type": "number"
+        },
+        "width": {
+          "default": 0,
+          "description": "The width of the dimension",
+          "minimum": 0,
+          "id": "/geotoolkit.util.Dimension/properties/width",
+          "title": "Width",
+          "type": "number"
+        }
+      }
+    }
+  ]
+}

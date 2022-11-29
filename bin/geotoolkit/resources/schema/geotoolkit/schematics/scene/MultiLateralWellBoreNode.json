@@ -1,0 +1,23 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.schematics.scene.MultiLateralWellBoreNode",
+    "description": "Schema describing MultiLateral WellBore Node",
+    "title": "Multilateral WellBoreNode Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.Group"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.schematics.scene.MultiLateralWellBoreNode",
+                            "id": "/geotoolkit.schematics.scene.MultiLateralWellBoreNode/properties/ClassName"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

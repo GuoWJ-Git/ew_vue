@@ -1,0 +1,7 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.visuals.VisualColorMap",
+    "description": "Schema describing Contour Visual ColorMap",
+    "title": "Contour VisualColorMap Schema",
+    "type": "object"
+}

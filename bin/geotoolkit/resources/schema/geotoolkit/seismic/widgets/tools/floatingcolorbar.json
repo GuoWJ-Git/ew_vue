@@ -1,0 +1,78 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar",
+    "description": "Schema describing Floating ColorBar tool",
+    "title": "FloatingColorBar Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.controls.tools.AbstractTool"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.seismic.widgets.tools.FloatingColorBar",
+                            "id": "/geotoolkit.seismic.widgets.tools/properties/ClassName"
+                        }
+                    ]
+                },
+                "name": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/name",
+                    "type": "string",
+                    "default": "colorbar"
+                },
+                "enabled": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/enabled",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                "layer": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/layer",
+                    "$ref": "/geotoolkit.scene.CompositeNode"
+                },
+                "orientation": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/orientation",
+                    "type": "string"
+                },
+                "linestyle": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/linestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "fillstyle": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/fillstyle",
+                    "$ref": "/geotoolkit.attributes.FillStyle"
+                },
+                "textstyle": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/textstyle",
+                    "$ref": "/geotoolkit.attributes.TextStyle"
+                },
+                "textfillstyle": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/textfillstyle",
+                    "$ref": "/geotoolkit.attributes.FillStyle"
+                },
+                "size": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/size",
+                    "$ref": "/geotoolkit.util.Dimension"
+                },
+                "radius": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/radius",
+                    "type": "integer"
+                },
+                "padding": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/padding",
+                    "$ref": "/geotoolkit.attributes.SpaceStyle"
+                },
+                "locale": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/locale",
+                    "$ref": "/geotoolkit.util.Locale"
+                },
+                "labelformat": {
+                    "id": "/geotoolkit.seismic.widgets.tools.FloatingColorBar/properties/labelformat",
+                    "$ref": "/geotoolkit.util.NumberFormat"
+                }
+            }
+        }
+    ]
+}
+

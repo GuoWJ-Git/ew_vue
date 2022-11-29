@@ -1,0 +1,59 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.AdaptiveTickGenerator",
+  "description": "Schema describing carnac Adaptive Tick Generator",
+  "title": "Adaptive Tick Generator Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.NumericTickGenerator"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.AdaptiveTickGenerator",
+              "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/ClassName"
+            }
+          ]
+        },
+        "minorticksamount": {
+          "default": 5,
+          "description": "Number of minor ticks in between majors",
+          "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/minorticksamount",
+          "title": "Minor Ticks Amount",
+          "type": "integer"
+        },
+        "minspan": {
+          "default": 75,
+          "description": "Minimum distance between ticks",
+          "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/minspan",
+          "title": "Minimum Span",
+          "type": "integer"
+        },
+        "minspangrade": {
+          "default": "major",
+          "description": "Grade to specify minimum distance between ticks",
+          "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/minspangrade",
+          "title": "Grade for Minimum Span",
+          "type": "string"
+        },
+        "precision": {
+          "default": 9,
+          "description": "Defines the precision of each tick",
+          "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/precision",
+          "title": "Precision",
+          "type": "number"
+        },
+        "hidelabelsonspantoosmall": {
+          "default": true,
+          "description": "Flag defining if labels should be filtered automatically if they are overlapped",
+          "enum": [ true, false ],
+          "id": "/geotoolkit.axis.AdaptiveTickGenerator/properties/hidelabelsonspantoosmall",
+          "title": "Hide Labels on Span Too Small",
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

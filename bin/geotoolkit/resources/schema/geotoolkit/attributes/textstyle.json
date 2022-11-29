@@ -1,0 +1,62 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.attributes.TextStyle",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.attributes.ColoredStyle" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [{"#ref": "/ClassName"}, {
+                        "default": "geotoolkit.attributes.TextStyle",
+                        "id": "/geotoolkit.attributes.TextStyle/properties/ClassName"
+                    }]
+                },
+                "font": {
+                    "default": "12px sans-serif",
+                    "id": "/geotoolkit.attributes.TextStyle/properties/font",
+                    "description": "The font family of the text",
+                    "title": "Font",
+                    "type": "string"
+                },
+                "baseline": {
+                    "default": "middle",
+                    "id": "/geotoolkit.attributes.TextStyle/properties/baseline",
+                    "enum": [ "top", "hanging", "middle", "alphabetic", "ideographic", "bottom" ],
+                    "description": "The virtual vertical line along which the character rests",
+                    "title": "Base Line",
+                    "type": "string"
+                },
+                "alignment": {
+                    "default": "left",
+                    "id": "/geotoolkit.attributes.TextStyle/properties/alignment",
+                    "description": "The position of the text in the containing bounds relative to the center.",
+                    "enum": [ "start", "end", "left", "center", "right" ],
+                    "title": "Alignment",
+                    "type": "string"
+                },
+                "lineheight": {
+                    "default": "100%",
+                    "id": "/geotoolkit.attributes.TextStyle/properties/lineheight",
+                    "description": "CSS formatted height of a single line of text",
+                    "title": "Line Height",
+                    "type": "string"
+                },
+                "multiline": {
+                    "default": true,
+                    "id": "/geotoolkit.attributes.TextStyle/properties/multiline",
+                    "description": "Defines if the text should be split into multiple lines or keep one line regardless of the length.",
+                    "title": "Multiline",
+                    "type": "boolean"
+                },
+                "autosize": {
+                    "default": true,
+                    "id": "/geotoolkit.attributes.TextStyle/properties/autosize",
+                    "description": "Auto font size on high definition display.",
+                    "title": "Auto Size",
+                    "type": "boolean"
+                }
+            }
+        }
+    ]
+}

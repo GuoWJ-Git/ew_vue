@@ -1,0 +1,131 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.layout.LayoutStyle",
+  "type": "object",
+  "description": "Schema describing the geotoolkit Layout Style class",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.Style" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "defaullt": "geotoolkit.layout.LayoutStyle",
+              "id": "/geotoolkit.layout.LayoutStyle/properties/ClassName"
+            }
+          ]
+        },
+        "height": {
+          "description": "The height of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/height",
+          "title": "Height",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "width": {
+          "description": "The width of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/width",
+          "title": "Width",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "left": {
+          "description": "X coordinate of left top corner",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/left",
+          "title": "Left",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "top": {
+          "description": "Y coordinate of left top corner",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/top",
+          "title": "Top",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "right": {
+          "description": "X coordinate of right bottom corner",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/right",
+          "title": "Right",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "bottom": {
+          "description": "Y coordinate of right bottom corner",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/bottom",
+          "title": "Bottom",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "min-height": {
+          "description": "The minimum height of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/min-height",
+          "title": "MinHeight",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "min-width": {
+          "description": "The minimum width of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/min-width",
+          "title": "MinWidth",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "max-height": {
+          "description": "The maximum height of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/max-height",
+          "title": "MaxHeight",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "max-width": {
+          "description": "The maximum width of the object",
+          "id": "/geotoolkit.layout.LayoutStyle/properties/max-width",
+          "title": "MaxWidth",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "number"},
+            {"type": "string"}
+          ]
+        },
+        "constraint": {
+          "description": "Size constraint",
+          "default": 0,
+          "id": "/geotoolkit.layout.LayoutStyle/properties/constraint",
+          "title": "Constraint",
+          "oneOf": [
+            {"type": "string"}
+          ]
+        }
+      }
+    }
+  ]
+}

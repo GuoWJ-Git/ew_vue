@@ -1,0 +1,35 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.deviation.PiecewiseTransformer",
+  "description": "Schema describing Piecewise Transformer",
+  "title": "Piecewise Transformer Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.deviation.PiecewiseTransformer",
+              "id": "/geotoolkit.deviation.PiecewiseTransformer/properties/ClassName"
+            }
+          ]
+        },
+        "approxThreshold": {
+          "id": "/geotoolkit.deviation.PiecewiseTransformer/properties/approxThreshold",
+          "type": "number"
+        },
+        "outlineSegments": {
+          "id": "/geotoolkit.deviation.PiecewiseTransformer/properties/outlineSegments",
+          "type": "boolean"
+        },
+        "trackWidthStrategy": {
+          "id": "/geotoolkit.deviation.PiecewiseTransformer/properties/trackWidthStrategy",
+          "$ref": "/geotoolkit.deviation.ProportionalWidthStrategy"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.util.Locale",
+  "description": "The schema describes the carnac Locale class.",
+  "properties": {
+    "ClassName": {
+      "default": "geotoolkit.util.Locale",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "/geotoolkit.util.Locale/properties/ClassName",
+      "title": "The Classname Schema",
+      "type": "string"
+    },
+    "locale": {
+      "default": "",
+      "description": "An explanation about the purpose of this instance.",
+      "id": "/geotoolkit.util.Locale/properties/locale",
+      "title": "The _locale Schema",
+      "type": "string"
+    },
+    "numberformat": {
+      "id": "/geotoolkit.util.Locale/properties/numberformat",
+      "type": "object",
+      "properties": {
+        "dec": {
+          "id": "/geotoolkit.util.Locale/properties/numberformat/properties/dec",
+          "type": "string"
+        },
+        "group": {
+          "id": "/geotoolkit.util.Locale/properties/numberformat/properties/group",
+          "type": "string"
+        },
+        "infinity": {
+          "id": "/geotoolkit.util.Locale/properties/numberformat/properties/infinity",
+          "type": "string"
+        },
+        "neg": {
+          "id": "/geotoolkit.util.Locale/properties/numberformat/properties/neg",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "type": "object"
+}

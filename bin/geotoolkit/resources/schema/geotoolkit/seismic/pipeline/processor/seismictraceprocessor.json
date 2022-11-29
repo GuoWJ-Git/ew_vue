@@ -1,0 +1,29 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit Seismic Trace Processor",
+  "id": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor",
+  "title": "Seismic Trace Processor Root Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "name": {
+          "description": "Processor name",
+          "id": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor/properties/name",
+          "type": "string"
+        },
+        "apply": {
+          "id": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor/properties/apply",
+          "type": "boolean"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor",
+            "id": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

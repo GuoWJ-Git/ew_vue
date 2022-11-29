@@ -1,0 +1,31 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.attributes.ClipStyle",
+  "type": "object",
+  "description": "Schema describing the geotoolkit Clip Style class",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.Style" },
+    {
+      "properties": {
+        "geometry": {
+          "description": "The geometry of the clipping area",
+          "id": "/geotoolkit.attributes.ClipStyle/properties/geometry",
+          "title": "Geometry",
+          "oneOf": [
+            {"$ref": "/geotoolkit.renderer.GraphicsPath"},
+            {"type": "null"}
+          ]
+        },
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "defaullt": "geotoolkit.attributes.ClipStyle",
+              "id": "/geotoolkit.attributes.ClipStyle/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

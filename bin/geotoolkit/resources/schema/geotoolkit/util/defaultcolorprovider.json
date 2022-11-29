@@ -1,0 +1,27 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.util.DefaultColorProvider",
+    "description": "Schema describing DefaultColorProvider",
+    "title": "DefaultColorProvider Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.util.ColorProvider"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.util.DefaultColorProvider",
+                            "id": "/geotoolkit.util.DefaultColorProvider/properties/ClassName"
+                        }
+                    ]
+                },
+                "scale": {
+                    "id": "/geotoolkit.util.DefaultColorProvider/properties/scale",
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

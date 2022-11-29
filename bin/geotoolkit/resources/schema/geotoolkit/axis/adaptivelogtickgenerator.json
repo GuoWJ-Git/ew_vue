@@ -1,0 +1,26 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.AdaptiveLogTickGenerator",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.NumericTickGenerator" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.axis.AdaptiveLogTickGenerator",
+            "id": "/geotoolkit.axis.AdaptiveLogTickGenerator/properties/ClassName"
+          }]
+        },
+        "orientation": {
+          "default": "vertical",
+          "description": "The direction in which the axis grows.",
+          "enum": ["vertical", "horizontal"],
+          "id": "/geotoolkit.axis.AdaptiveLogTickGenerator/properties/orientation",
+          "title": "Orientation",
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.util.RgbaColor",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "alpha": {
+          "default": 255,
+          "description": "The number specifying the alpha channel.",
+          "id": "/geotoolkit.util.RgbaColor/properties/alpha",
+          "title": "Alpha",
+          "type": "number"
+        },
+        "blue": {
+          "default": 0,
+          "description": "The number specifying the blue channel.",
+          "id": "/geotoolkit.util.RgbaColor/properties/blue",
+          "title": "Blue",
+          "type": "number"
+        },
+        "green": {
+          "default": 0,
+          "description": "The number specifying the green channel.",
+          "id": "/geotoolkit.util.RgbaColor/properties/green",
+          "title": "Green",
+          "type": "number"
+        },
+        "red": {
+          "default": 0,
+          "description": "The number specifying the red channel.",
+          "id": "/geotoolkit.util.RgbaColor/properties/red",
+          "title": "Red",
+          "type": "number"
+        }
+      }
+    }
+  ]
+}

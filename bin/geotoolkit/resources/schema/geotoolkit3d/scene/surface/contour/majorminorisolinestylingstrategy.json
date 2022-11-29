@@ -1,0 +1,32 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit3d.scene.surface.contour.MajorMinorStrategy",
+    "description": "Schema describing MajorMinor Isoline Styling Strategy Visual",
+    "title": "Contour Major-Minor Isolines Styling Strategy Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/EmptyClass" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit3d.scene.surface.contour.MajorMinorStrategy",
+                            "id": "/geotoolkit3d.scene.surface.contour.MajorMinorStrategy/properties/ClassName"
+                        }
+                    ]
+                },
+                "majorstep": {
+                    "id": "/geotoolkit3d.scene.surface.contour.MajorMinorStrategy/properties/majorstep",
+                    "type": "integer"
+                },
+                "minorincrement": {
+                    "id": "/geotoolkit3d.scene.surface.contour.MajorMinorStrategy/properties/minorincrement",
+                    "type": "integer"
+                }
+            }
+        }
+    ]
+    
+}

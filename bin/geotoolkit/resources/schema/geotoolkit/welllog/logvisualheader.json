@@ -1,0 +1,50 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.header.LogVisualHeader",
+  "description": "Schema describing geotoolkit LogVisualHeader",
+  "title": "LogVisualHeader",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.AbstractNode" },
+    {
+      "properties": {
+        "fillstyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.welllog.header.LogVisualHeader/properties/fillstyle",
+          "oneOf": [
+            {
+              "$ref": "/geotoolkit.attributes.FillStyle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "linestyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.welllog.header.LogVisualHeader/properties/linestyle",
+          "oneOf": [
+            {
+              "$ref": "/geotoolkit.attributes.LineStyle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "textstyle": {
+          "additionalProperties": true,
+          "id": "/geotoolkit.welllog.header.LogVisualHeader/properties/textstyle",
+          "oneOf": [
+            {
+              "$ref": "/geotoolkit.attributes.TextStyle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

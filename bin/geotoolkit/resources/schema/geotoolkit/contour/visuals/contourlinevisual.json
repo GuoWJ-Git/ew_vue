@@ -1,0 +1,81 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.visuals.ContourLineVisual",
+    "description": "Schema describing Contour Line visual",
+    "title": "Contour Line Visual Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.visuals.AbstractVisual"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.visuals.ContourLineVisual",
+                            "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/ClassName"
+                        }
+                    ]
+                },
+                "linesvisible": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/linesvisible",
+                    "type": "boolean"
+                },
+                "labelsvisible": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/labelsvisible",
+                    "type": "boolean"
+                },
+                "indexstep": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/indexstep",
+                    "type": "integer"
+                },
+                "labelspacing": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/labelspacing",
+                    "type": "integer"
+                },
+                "labelmargin": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/labelmargin",
+                    "type": "integer"
+                },
+                "labelformat": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/labelformat",
+                    "$ref": "/geotoolkit.util.NumberFormat"
+                },
+                "linestyle": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/linestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "textstyle": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/textstyle",
+                    "$ref": "/geotoolkit.attributes.TextStyle"
+                },
+                "usefontcolorforlabels": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/usefontcolorforlabels",
+                    "type": "boolean"
+                },
+                "labelingstrategy": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/labelingstrategy",
+                    "type": "object",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.strategy.MajorMinorLabelingStrategy"}
+                    ]
+                },
+                "isolinesstylingstrategy": {
+                    "id": "/geotoolkit.contour.visuals.ContourLineVisual/properties/isolinesstylingstrategy",
+                    "type": "object",
+                    "oneOf": [
+                        { "type": "null" },
+                        {
+                            "allOf": [
+                                { "$ref": "/geotoolkit.contour.strategy.MajorMinorIsolineStylingStrategy" },
+                                { "$ref": "/geotoolkit.contour.strategy.SingleIsolineStylingStrategy" }
+                            ]
+                        }
+
+                    ]
+                }
+            }
+        }
+    ]
+}

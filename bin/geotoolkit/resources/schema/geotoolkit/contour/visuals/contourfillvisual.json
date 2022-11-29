@@ -1,0 +1,33 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.visuals.ContourFillVisual",
+    "description": "Schema describing Contour Fill Visual",
+    "title": "Contour Contour Fill Visual Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.visuals.AbstractVisual"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.visuals.ContourFillVisual",
+                            "id": "/geotoolkit.contour.visuals.ContourFillVisual/properties/ClassName"
+                        }
+                    ]
+                }
+            },
+            "transparentholes": {
+                "id": "/geotoolkit.contour.visuals.ContourFillVisual/properties/transparentholes",
+                "descrition": "Transparentholes property description",
+                "type": "boolean"
+            },
+            "holecolor": {
+                "id": "/geotoolkit.contour.visuals.ContourFillVisual/properties/holecolor",
+                "descrition": "holecolor property description",
+                "type": "string"
+            }
+        }
+    ]
+}

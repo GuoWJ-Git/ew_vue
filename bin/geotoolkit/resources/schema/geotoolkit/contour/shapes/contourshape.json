@@ -1,0 +1,158 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.shapes.ContourShape",
+    "description": "Schema describing Contour Shape",
+    "title": "Contour Shape Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.shapes.Shape"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.shapes.ContourShape",
+                            "id": "/geotoolkit.contour.shapes.ContourShape/properties/ClassName"
+                        }
+                    ]
+                },
+                "visuals": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/visuals",
+                    "descrition": "Visuals property description",
+                    "oneOf": [
+                        { "type": "null" },
+                        {
+                            "type": "array",
+                            "items": {
+                                "$ref": "/geotoolkit.contour.visuals.AbstractVisual"
+                            }
+                        }
+                    ]
+                },
+                "shapeprojection": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/shapeprojection",
+                    "descrition": "Shapeprojection property description",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.projections.AbstractProjection" }
+                    ]
+                },
+                "grid": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/grid",
+                    "descrition": "Grip property description",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.grid.ContourAbstractGrid" }
+                    ]
+                },
+                "dataprocessor": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/dataprocessor",
+                    "description": "Data processor",
+                    "title": "Data processor title",
+                    "$ref": "/geotoolkit.contour.processor.ContourDataProcessor"
+                },
+                "datasource": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/datasource",
+                    "description": "Datasource description",
+                    "title": "Datasource title",
+                    "$ref": "/geotoolkit.contour.datasource.AbstractContourDataSource"
+                },
+                "gridtomodel": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/gridtomodel",
+                    "description": "gridtomodel description",
+                    "title": "gridtomodel title",
+                    "$ref": "/geotoolkit.util.Transformation"
+                },
+                "scale": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/scale",
+                    "description": "Scale description",
+                    "title": "Scale title",
+                    "$ref": "/geotoolkit.contour.scale.ContourScale"
+                },
+                "faultslist": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/faultslist",
+                    "description": "faultslist description",
+                    "title": "faultslist title",
+                    "$ref": "/geotoolkit.contour.faults.ContourFaultList"
+                },
+                "maxlabelwidth": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/maxlabelwidth",
+                    "description": "maxlabelwidth description",
+                    "title": "maxlabelwidth title",
+                    "type": "integer"
+                },
+                "ignoreerroneousdata": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/ignoreerroneousdata",
+                    "description": "Ignore error oneousdata description",
+                    "title": "ignoreerroneousdata title",
+                    "type": "boolean"
+                },
+                "faultpointprecision": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/faultpointprecision",
+                    "description": "faultpointprecision description",
+                    "title": "faultpointprecision title",
+                    "type": "number"
+                },
+                "minvisiblelevel": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/minvisiblelevel",
+                    "description": "minvisiblelevel description",
+                    "title": "minvisiblelevel title",
+                    "type": "integer"
+                },
+                "maxvisiblelevel": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/maxvisiblelevel",
+                    "description": "maxvisiblelevel description",
+                    "title": "maxvisiblelevel title",
+                    "type": "number"
+                },
+                "labelsdirection": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/labelsdirection",
+                    "description": "Direction of labels",
+                    "title": "Labels direction title",
+                    "type": "integer"
+                },
+                "suppressintersectinglabels": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/suppressintersectinglabels",
+                    "description": "Supress intersection labels",
+                    "title": "Data processor title",
+                    "type": "boolean"
+                },
+                "smoothingisolines": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/smoothingisolines",
+                    "description": "Smoothing iso lines",
+                    "title": "Data processor title",
+                    "type": "boolean"
+                },
+                "smoothinglabels": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/smoothinglabels",
+                    "description": "Smoothing labels",
+                    "title": "Data processor title",
+                    "type": "boolean"
+                },
+                "isofill": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/isofill",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.visuals.ContourFillVisual" }
+                    ]
+                },
+                "isoline": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/isoline",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.visuals.ContourLineVisual"}
+                    ]
+                },
+                "border": {
+                    "id": "/geotoolkit.contour.shapes.ContourShape/properties/border",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.contour.visuals.ContourBorderVisual"}
+                    ]
+                }
+            }
+        }
+    ]
+
+}

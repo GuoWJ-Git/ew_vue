@@ -1,0 +1,294 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit3d.scene.surface.contour.Contour",
+    "description": "A Contour 3D object",
+    "title": "Contour 3D Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/EmptyClass" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit3d.scene.surface.contour.Contour",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/ClassName"
+                        }
+                    ]
+                },
+                "colorprovider": {
+                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/colorprovider",
+                    "description": "A color provider or a single color in css format",
+                    "title": "Color Provider",
+                    "oneOf": [
+                        {"type": "null"},
+                        {"type": "string"},
+                        {"$ref": "/geotoolkit.util.ColorProvider"}
+                    ]
+                },
+                "opacity": {
+                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/opacity",
+                    "description": "The opacity for the surface contour",
+                    "title": "Surface opacity",
+                    "type": "number"
+                },
+                "surface": {
+                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/surface",
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "title": "Enable surface",
+                            "description": "Whether to show surface or not. Does not affect isoline or label",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/surface/properties/enabled",
+                            "type": "boolean"
+                        },
+                        "preservesurfacecolor": {
+                            "title": "Preserve surface color for isolines",
+                            "description": "Whether to preserve surface color for isolines, if surface is disabled. This will overwrite isoline color settings",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/surface/properties/preservesurfacecolor",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "isoline": {
+                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline",
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "title": "Enable isolines",
+                            "description": "Whether to show isolines or not",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/enabled",
+                            "type": "boolean"
+                        },
+                        "zmin": {
+                            "title": "Min elevation level for isolines",
+                            "description": "The min elevation level for isolines",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/zmin",
+                            "type": "number"
+                        },
+                        "zmax": {
+                            "title": "Max elevation level for isolines",
+                            "description": "The max elevation level for isolines",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/zmax",
+                            "type": "number"
+                        },
+                        "maxcount": {
+                            "title": "Max number of isolines",
+                            "description": "The max number of isolines",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/maxcount",
+                            "type": "number"
+                        },
+                        "count": {
+                            "title": "Number of levels",
+                            "description": "Number of levels",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/count",
+                            "type": "integer"
+                        },
+                        "issizeindevice": {
+                            "title": "Set issizeindevice",
+                            "description": "True if the linewidth stays the same regardless of camera position",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/issizeindevice",
+                            "type": "boolean"
+                        },
+                        "majorminorstrategy": {
+                            "title": "Stepping strategy for major / minor isolines",
+                            "description": "The stepping strategy for major / minor isolines",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/majorminorstrategy",
+                            "$ref": "/geotoolkit3d.scene.surface.contour.MajorMinorStrategy"
+                        },
+                        "major": {
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/major",
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "title": "Visiblity of major isolines",
+                                    "description": "The visiblity of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/major/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "color": {
+                                    "title": "Сolor of major isolines",
+                                    "description": "The color of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/major/properties/color",
+                                    "type": "string",
+                                    "format": "color"
+                                },
+                                "width": {
+                                    "title": "Width of major isolines",
+                                    "description": "The width of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/major/properties/width",
+                                    "type": "number"
+                                }
+                            }
+                        },
+                        "minor": {
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/minor",
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "title": "Visiblity of major isolines",
+                                    "description": "The visiblity of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/minor/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "color": {
+                                    "title": "Сolor of major isolines",
+                                    "description": "The color of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/minor/properties/color",
+                                    "type": "string",
+                                    "format": "color"
+                                },
+                                "width": {
+                                    "title": "Width of major isolines",
+                                    "description": "The width of major isolines",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/isoline/properties/minor/properties/width",
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                },
+                "label": {
+                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label",
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "title": "Enable labeling",
+                            "description": "set true to enable labeling",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/enabled",
+                            "type": "boolean"
+                        },
+                        "major": {
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "title": "Major label visiblity",
+                                    "description": "Major label visiblity",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "style": {
+                                    "title": "Major label style",
+                                    "description": "The style of major label",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/style",
+                                    "$ref": "/geotoolkit.attributes.TextStyle"
+                                },
+                                "outline": {
+                                    "type": "object",
+                                    "properties": {
+                                        "enabled": {
+                                            "title": "Enable outline for major label",
+                                            "description": "Set true to enable outline for major label text",
+                                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/outline/properties/enabled",
+                                            "type": "boolean"
+                                        },
+                                        "innercolor": {
+                                            "title": "Inner color for the major label",
+                                            "description": "Inner color for the major label text with outline",
+                                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/outline/properties/innercolor",
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "$ref": "/geotoolkit.util.RgbaColor"
+                                                }
+                                            ]
+                                        },
+                                        "outlinecolor": {
+                                            "title": "Outline color for major label",
+                                            "description": "Outline color for major label text with outline",
+                                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/outline/properties/outlinecolor",
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "$ref": "/geotoolkit.util.RgbaColor"
+                                                }
+                                            ]
+                                        },
+                                        "thickness": {
+                                            "title": "Outline thickness for major label",
+                                            "description": "outline thickness for major label",
+                                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/major/properties/outline/properties/thickness"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "minor": {
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "title": "Minor label visiblity",
+                                    "description": "Minor label visiblity",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/minor/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "style": {
+                                    "title": "Minor label style",
+                                    "description": "The style of major label",
+                                    "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/minor/style",
+                                    "$ref": "/geotoolkit.attributes.TextStyle"
+                                },
+                                "outline": {
+                                    "enabled": {
+                                        "title": "Enable outline for minor label",
+                                        "description": "Set true to enable outline for major label text",
+                                        "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/minor/outline/enabled",
+                                        "type": "boolean"
+                                    },
+                                    "innercolor": {
+                                        "title": "Inner color for the minor label",
+                                        "description": "Inner color for the minor label text with outline",
+                                        "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/minor/outline/innercolor",
+                                        "oneOf": [
+                                            {
+                                                "type": "string"
+                                            },
+                                            {
+                                                "$ref": "/geotoolkit.util.RgbaColor"
+                                            }
+                                        ]
+                                    },
+                                    "outlinecolor": {
+                                        "title": "Outline color for minor label",
+                                        "description": "Outline color for minor label text with outline",
+                                        "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/minor/outline/outlinecolor",
+                                        "oneOf": [
+                                            {
+                                                "type": "string"
+                                            },
+                                            {
+                                                "$ref": "/geotoolkit.util.RgbaColor"
+                                            }
+                                        ]
+                                    },
+                                    "thickness": {
+                                        "title": "Outline thickness for minor label",
+                                        "description": "outline thickness for major label",
+                                        "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/minor/outline/thickness"
+                                    }
+                                }
+                            }
+                        },
+                        "opacity": {
+                            "title": "Opacity of label",
+                            "description": "Opacity of label",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/opacity",
+                            "type": "number"
+                        },
+                        "density": {
+                            "title": "Density of label",
+                            "description": "The density of labels scattered on surface",
+                            "id": "/geotoolkit3d.scene.surface.contour.Contour/properties/label/properties/density",
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

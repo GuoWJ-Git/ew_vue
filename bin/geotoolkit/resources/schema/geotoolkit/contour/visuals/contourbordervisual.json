@@ -1,0 +1,28 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.contour.visuals.ContourBorderVisual",
+    "description": "Schema describing Contour Border Visual",
+    "title": "Contour Contour Border Visual Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.contour.visuals.AbstractVisual"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.contour.visuals.ContourBorderVisual",
+                            "id": "/geotoolkit.contour.visuals.ContourBorderVisual/properties/ClassName"
+                        }
+                    ]
+                }
+            },
+            "linestyle": {
+                "id": "/geotoolkit.contour.visuals.ContourBorderVisual/properties/linestyle",
+                "descrition": "Transparentholes property description",
+                "$ref": "/geotoolkit.attributes.LineStyle"
+            }
+        }
+    ]
+}

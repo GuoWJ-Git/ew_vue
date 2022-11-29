@@ -1,0 +1,9 @@
+{
+  "additionalProperties": true,
+  "title": "Anchor Type",
+  "description": "An enum defining all types of anchors supported by carnac",
+  "id": "/geotoolkit.util.AnchorType",
+  "minimum": 0,
+  "maximum": 9,
+  "type": "integer"
+}

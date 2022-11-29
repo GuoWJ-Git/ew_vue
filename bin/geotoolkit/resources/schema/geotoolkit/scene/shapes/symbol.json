@@ -1,0 +1,29 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing carnac symbol",
+  "title": "SymbolShape Schema",
+  "id": "/geotoolkit.scene.shapes.SymbolShape",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.shapes.AnchoredShape"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.scene.shapes.SymbolShape",
+              "id": "/geotoolkit.scene.shapes.SymbolShape/properties/ClassName"
+            }
+          ]
+        },
+        "painter": {
+          "description": "The name of the painter used to render the symbol, or the serialized painter function",
+          "id": "/geotoolkit.scene.shapes.SymbolShape/properties/painter",
+          "title": "Painter",
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

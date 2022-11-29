@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.VersatileLabelingStrategy",
+  "description": "Schema describing Versatile Labeling Strategy",
+  "title": "Versatile Labeling Strategy Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.schematics.labeling.LabelingStrategyBase"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.VersatileLabelingStrategy",
+              "id": "/geotoolkit.schematics.labeling.VersatileLabelingStrategy/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

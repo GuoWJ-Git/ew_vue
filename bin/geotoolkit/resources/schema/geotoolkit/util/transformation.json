@@ -1,0 +1,62 @@
+{
+  "additionalProperties": true,
+  "description": "This schema describes Carnac transformations.",
+  "id": "/geotoolkit.util.Transformation",
+  "title": "Carnac Transformation Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass" },
+    {
+      "properties": {
+        "dx": {
+          "description": "The translate value of X coordinate.",
+          "id": "/geotoolkit.util.Transformation/properties/dx",
+          "title": "Translate X",
+          "type": "number",
+          "default": 0
+        },
+        "dy": {
+          "description": "The translate value of Y coordinate.",
+          "id": "/geotoolkit.util.Transformation/properties/dy",
+          "title": "Translate Y",
+          "type": "number",
+          "default": 0
+        },
+        "xx": {
+          "description": "The scale value of X coordinate",
+          "id": "/geotoolkit.util.Transformation/properties/xx",
+          "title": "Scale X",
+          "type": "number",
+          "default": 1
+        },
+        "xy": {
+          "description": "The XY skew value",
+          "id": "/geotoolkit.util.Transformation/properties/xy",
+          "title": "XY Skew",
+          "type": "number",
+          "default": 0
+        },
+        "yx": {
+          "description": "The YX skew value",
+          "id": "/geotoolkit.util.Transformation/properties/yx",
+          "title": "YX Skew",
+          "type": "number",
+          "default": 0
+        },
+        "yy": {
+          "description": "The scale value of Y coordinate",
+          "id": "/geotoolkit.util.Transformation/properties/yy",
+          "title": "Scale Y",
+          "type": "number",
+          "default": 1
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.util.Transformation",
+            "id": "/geotoolkit.util.Transformation/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

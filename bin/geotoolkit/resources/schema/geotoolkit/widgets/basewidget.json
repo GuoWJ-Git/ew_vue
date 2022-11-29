@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.BaseWidget",
+  "description": "Schema describing Carnac Base Widget",
+  "title": "Base Widget Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.Group" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.BaseWidget",
+              "id": "/geotoolkit.widgets.BaseWidget/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

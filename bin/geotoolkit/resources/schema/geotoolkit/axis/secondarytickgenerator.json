@@ -1,0 +1,26 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.SecondaryTickGenerator",
+  "description": "Schema describing carnac Secondary Tick Generator",
+  "title": "Secondary Tick Generator Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.axis.NumericTickGenerator"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.axis.SecondaryTickGenerator",
+              "id": "/geotoolkit.axis.SecondaryTickGenerator/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+

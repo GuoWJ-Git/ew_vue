@@ -1,0 +1,86 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget",
+    "description": "Schema describing Seismic TraceHeaderChart Widget",
+    "title": "TraceHeaderChart Widget Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.widgets.AnnotatedWidget"},
+        { 
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.seismic.widgets.TraceHeaderChartWidget",
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/ClassName"
+                        }
+                    ]
+                },
+                "title": {
+                    "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/title",
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/title/text",
+                            "type": "string"
+                        },
+                        "size": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/title/size",
+                            "type": "integer"
+                        },
+                        "textstyle": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/title/textstyle",
+                            "$ref": "/geotoolkit.attributes.TextStyle"
+                        }
+                    }
+                },
+                "charts": {
+                    "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/charts",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/charts/title",
+                                "oneOf": [
+                                    { "type": "string"},
+                                    { 
+                                        "type" : "object",
+                                        "properties": {
+                                            "text": { "type": "string" },
+                                            "textstyle": { "$ref": "/geotoolkit.attributes.TextStyle" },
+                                            "size": { "type": "integer" }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "annotationssizes": {
+                    "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/annotationssizes",
+                    "type": "object",
+                    "properties": {
+                        "west": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/annotationssizes/west",
+                            "type": "integer"
+                        },
+                        "east": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/annotationssizes/east",
+                            "type": "integer"
+                        },
+                        "north": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/annotationssizes/north",
+                            "type": "integer"
+                        },
+                        "south": {
+                            "id": "/geotoolkit.seismic.widgets.TraceHeaderChartWidget/properties/annotationssizes/south",
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

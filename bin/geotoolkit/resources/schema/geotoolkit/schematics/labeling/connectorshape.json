@@ -1,0 +1,27 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.ConnectorShape",
+  "description": "Schema describing Connector Shape",
+  "title": "Connector Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.ConnectorShape",
+              "id": "/geotoolkit.schematics.labeling.ConnectorShape/properties/ClassName"
+            }
+          ]
+        },
+        "linestyle": {
+          "id": "/geotoolkit.schematics.labeling.ConnectorShape/properties/linestyle",
+          "$ref": "/geotoolkit.attributes.LineStyle"
+        }
+      }
+    }
+  ]
+}

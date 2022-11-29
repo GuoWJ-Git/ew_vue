@@ -1,0 +1,80 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase",
+  "description": "Schema describing Carnac TimeSeriesObjectBase",
+  "title": "TimeSeriesObjectBase Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.util.EventDispatcher"},
+    {
+      "properties": {
+        "curveaxis": {
+          "description": "Axis properties",
+          "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/visible",
+              "type": "boolean"
+            },
+            "compact": {
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/compact",
+              "type": "boolean"
+            },
+            "position": {
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/position",
+              "type": "string",
+              "enum": [
+                "left",
+                "right"
+              ]
+            },
+            "tickgeneratoroptions": {
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions",
+              "type": "object",
+              "properties": {
+                "major": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/major",
+                  "type": "object",
+                  "properties": {
+                    "tickvisible": {
+                      "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/major/properties/tickvisible",
+                      "type": "boolean"
+                    },
+                    "labelvisible": {
+                      "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/major/properties/labelvisible",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "minor": {
+                  "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/minor",
+                  "type": "object",
+                  "properties": {
+                    "tickvisible": {
+                      "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/minor/properties/tickvisible",
+                      "type": "boolean"
+                    },
+                    "labelvisible": {
+                      "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/curveaxis/properties/tickgeneratoroptions/properties/minor/properties/labelvisible",
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.timeseries.TimeSeriesObjectBase",
+              "id": "/geotoolkit.widgets.timeseries.TimeSeriesObjectBase/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline",
+    "description": "Schema describing Seismic Pipeline",
+    "title": "Seismic Pipeline Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.util.EventDispatcher"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.seismic.pipeline.SeismicPipeline",
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/ClassName"
+                        }
+                    ]
+                },
+                "maximumTracesPerPixel": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/maximumtracesperpixel",
+                    "type": "integer"
+                },
+                "tracemapping": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/tracemapping",
+                    "oneOf": [
+                        { "type": "null" },
+                        { "$ref": "/geotoolkit.seismic.data.TraceMapping" }
+                    ]
+                },
+                "traceoffset": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/traceoffset",
+                    "type": "integer"
+                },
+                "interpolation": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation",
+                    "type": "object",
+                    "properties": {
+                        "traces": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/traces",
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/traces/properties/type",
+                                    "type": "string",
+                                    "enum": ["Linear", "Quadratic", "Step", "CenteredStep", "Cubic", "Logarithmic"]
+                                },
+                                "edge": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/traces/properties/edge",
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "samples": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/samples",
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/samples/properties/type",
+                                    "type": "string",
+                                    "enum": ["Linear", "Quadratic", "Step", "CenteredStep", "Cubic", "Logarithmic"]
+                                },
+                                "edge": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/interpolation/properties/samples/properties/edge",
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "normalization": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/normalization",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/normalization/properties/type",
+                            "type": "string",
+                            "enum": ["None", "Maximum", "TraceMaximum", "Average", "TraceAverage", "RMS", "TraceRMS", "Limits"]
+                        },
+                        "limits": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/normalization/properties/limits",
+                            "$ref": "/geotoolkit.util.Range"
+                        },
+                        "scale": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/normalization/properties/scale",
+                            "type": "number"
+                        }
+
+                    }
+                },
+                "plot": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type",
+                            "type": "object",
+                            "properties": {
+                                "Wiggle": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/wiggle",
+                                    "type": "boolean"
+                                },
+                                "PositiveFill": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/positivefill",
+                                    "type": "boolean"
+                                },
+                                "NegativeFill": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/negativefill",
+                                    "type": "boolean"
+                                },
+                                "PositiveColorFill": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/positivecolorfill",
+                                    "type": "boolean"
+                                },
+                                "NegativeColorFill": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/negativecolorfill",
+                                    "type": "boolean"
+                                },
+                                "SimpleDensity": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/simpledensity",
+                                    "type": "boolean"
+                                },
+                                "InterpolatedDensity": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/interpolateddensity",
+                                    "type": "boolean"
+                                },
+                                "Reversed": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/type/properties/reversed",
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "clippingFactor": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/clippingfactor",
+                            "type": "number"
+                        },
+                        "decimationSpacing": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/decimationspacing",
+                            "type": "number"
+                        },
+                        "densityDecimation": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/densitydecimation",
+                            "type": "boolean"
+                        },
+                        "amplitudeDecimation": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/amplitudedecimation",
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/amplitudedecimation/properties/enabled",
+                                    "type": "boolean"
+                                },
+                                "sizeInPixels": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/amplitudedecimation/properties/sizeinpixels",
+                                    "type": "number"
+                                },
+                                "nullifyValues": {
+                                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/plot/properties/amplitudedecimation/properties/nullifyvalues",
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "colors": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/colors",
+                    "type": "object",
+                    "properties": {
+                        "colorMap": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/colors/properties/colorMap",
+                            "anyOf": [
+                                { "type": "string" },
+                                { "$ref": "/geotoolkit.seismic.util.ColorMap" }
+                            ]
+                        },
+                        "alpha": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/colors/properties/alpha",
+                            "type": "number"
+                        }
+                    }
+
+                },
+                "fetch": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/fetch",
+                    "type": "object",
+                    "properties": {
+                        "synchronous": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/fetch/properties/synchronous",
+                            "type": "boolean"
+                        },
+                        "maxfetch": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/fetch/properties/maxfetch",
+                            "type": "integer"
+                        },
+                        "awaittime": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/fetch/properties/awaittime",
+                            "type": "integer"
+                        },
+                        "fetchsize": {
+                            "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/fetch/properties/fetchsize",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "renderingside": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/renderingside",
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "processes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "anyOf": [
+                            { "$ref": "/geotoolkit.seismic.pipeline.processor.AGC" },
+                            { "$ref": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess" },
+                            { "$ref": "/geotoolkit.seismic.pipeline.processor.Reverse" }
+                        ]
+                    }
+                },
+                "clippingmode": {
+                    "id": "/geotoolkit.seismic.pipeline.SeismicPipeline/properties/clippingmode",
+                    "type": "string",
+                    "enum": ["Connected", "Disconnected"]
+                }
+            }
+        }
+    ]
+}

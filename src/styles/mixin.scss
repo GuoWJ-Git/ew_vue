@@ -1,0 +1,38 @@
+/* 单行文本,超出省略号显示 */
+@mixin textOverflowEllipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @content;
+}
+
+/* 多行文本,超出省略号显示 */
+@mixin multipleTextOverflowEllipsis($lineClamp: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lineClamp;
+  line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+  @content;
+}
+
+@mixin flexRow($justifyContent: center, $alignItems: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  @content;
+}
+
+@mixin singleCardContainerStyle() {
+  padding: var(--layout-container-padding);
+  background: var(--app-container-bg-color);
+  border-radius: 10px;
+  @content;
+}
+
+@mixin multipleCardContainerStyle() {
+  padding: var(--point-card-container-padding);
+  background: var(--app-container-bg-color);
+  border-radius: 10px;
+  @content;
+}

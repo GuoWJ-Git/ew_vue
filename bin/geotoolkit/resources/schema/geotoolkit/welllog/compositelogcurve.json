@@ -1,0 +1,59 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.welllog.CompositeLogCurve",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.welllog.LogCurve" },
+    {
+      "properties": {
+        "leftfill": {
+          "description": "Left fill properties",
+          "id": "/geotoolkit.welllog.CompositeLogCurve/properties/leftfill",
+          "title": "Left Fill",
+          "oneOf": [
+            { "$ref": "/geotoolkit.welllog.LogFill" },
+            { "type": "null" }
+          ]
+        },
+        "rightfill": {
+          "description": "Right fill properties",
+          "id": "/geotoolkit.welllog.CompositeLogCurve/properties/rightfill",
+          "title": "Right Fill",
+          "oneOf": [
+            { "$ref": "/geotoolkit.welllog.LogFill" },
+            { "type": "null" }
+          ]
+        },
+        "leftfilltype": {
+          "$ref": "/geotoolkit.welllog.LogFill/properties/filltype"
+        },
+        "rightfilltype": {
+          "$ref": "/geotoolkit.welllog.LogFill/properties/filltype"
+        },
+        "leftreferencepointset": {
+          "description": "Sets reference point set to fill to the left",
+          "id": "/geotoolkit.welllog.CompositeLogCurve/properties/leftreferencepointset",
+          "title": "Left reference point set",
+          "oneOf": [
+            { "$ref": "/geotoolkit.welllog.LogPointSet" },
+            { "type": "null" }
+          ]
+        },
+        "rightreferencepointset": {
+          "description": "Sets reference point set to fill to the right",
+          "id": "/geotoolkit.welllog.CompositeLogCurve/properties/rightreferencepointset",
+          "title": "Right reference point set",
+          "oneOf": [
+            { "$ref": "/geotoolkit.welllog.LogPointSet" },
+            { "type": "null" }
+          ]
+        },
+        "calculated": {
+          "description": "Placeholder for calculated properties",
+          "id": "/geotoolkit.welllog.CompositeLogCurve/properties/calculated",
+          "type": "object"
+        }
+      }
+    }
+  ]
+}

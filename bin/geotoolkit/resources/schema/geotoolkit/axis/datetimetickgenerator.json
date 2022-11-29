@@ -1,0 +1,107 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.DateTimeTickGenerator",
+  "type": "object",
+  "description": "A schema describing carnac Date Time Tick Generator.",
+  "title": "Date Time Tick Generator Schema",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.TickGenerator" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.axis.DateTimeTickGenerator",
+            "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/ClassName"
+          }]
+        },
+        "formatlabeleventhandler": {
+          "default": null,
+          "description": "A function used by the tickgenerator to build a label for a given model value",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/formatlabeleventhandler",
+          "title": "Format Label Handler",
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"}
+          ]
+        },
+        "labelmode": {
+          "default": 0,
+          "description": "The two label modes: 'default' and 'between' define if labels have to be generated on top of each ticks, or in between, displaying the middle value of two ticks.",
+          "miminum": 0,
+          "maximum": 1,
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/labelmode",
+          "title": "Label Mode",
+          "type": "integer"
+        },
+        "localtimezoneoffset": {
+          "default": 0,
+          "description": "The offset of time zone",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/localtimezoneoffset",
+          "title": "Local Time Zone Offset",
+          "type": "number"
+        },
+        "majorlabel": {
+          "description": "The styling of the major label, or a reference to a style in labelstyles object.",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/majorlabel",
+          "title": "Major Label Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.TextStyle" },
+            { "type": "string" }
+          ]
+        },
+        "majortick": {
+          "description": "The styling of the major tick, or a reference to a style in tickstyles object.",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/majortick",
+          "title": "Major Tick Style",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "/geotoolkit.attributes.LineStyle" },
+            { "type": "string" }
+          ]
+        },
+        "rotatelabels": {
+          "default": true,
+          "description": "Flag defining if labels should be rotated",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/rotatelabels",
+          "title": "Rotate Labels",
+          "type": "boolean"
+        },
+        "tickgrades": {
+          "additionalItems": false,
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/tickgrades",
+          "description": "Array of the type of ticks that are supported",
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": false
+        },
+        "timezone": {
+          "default": 0,
+          "description": "The enum value of the time zone to which the time ticks should be formatted.",
+          "id": "/geotoolkit.axis.AdaptiveDateTimeTickGenerator/properties/timezone",
+          "enum": [0, 1],
+          "title": "Time Zone",
+          "type": "integer"
+        },
+        "unitconversionfactor": {
+          "default": 1,
+          "description": "The factor by which the value of the labels should be divided to convert into the current unit of the axis.",
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/unitconversionfactor",
+          "title": "Unit Conversion Factor",
+          "type": "number"
+        },
+        "zoomlevel": {
+          "default": 9,
+          "description": "The amount of time that the space between two ticks represents.",
+          "minimum": 0,
+          "maximum": 14,
+          "id": "/geotoolkit.axis.DateTimeTickGenerator/properties/zoomlevel",
+          "title": "The Zoomlevel Schema",
+          "type": "integer"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter",
+  "description": "Schema describing Default Component Labeling Filter",
+  "title": "Default Component Labeling Filter Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.DefaultComponentsFilter",
+              "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/ClassName"
+            }
+          ]
+        },
+        "componentnames": {
+           "id": "/geotoolkit.schematics.labeling.DefaultComponentsFilter/properties/componentnames",
+           "type": "array"
+        }
+      }
+    }
+  ]
+}

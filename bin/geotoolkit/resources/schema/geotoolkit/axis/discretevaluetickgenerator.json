@@ -1,0 +1,27 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.axis.DiscreteValueTickGenerator",
+  "title": "Discrete Value Tick Generator Schema",
+  "description": "Schema describing Discrete Tick Generator",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.axis.TickGenerator" },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.axis.DiscreteValueTickGenerator",
+            "id": "/geotoolkit.axis.DiscreteValueTickGenerator/properties/ClassName"
+          }]
+        },
+        "maxlabel": {
+          "default": "",
+          "description": "The maximum label displayed in this axis",
+          "id": "/geotoolkit.axis.DiscreteValueTickGenerator/properties/maxlabel",
+          "title": "Maximum Label",
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

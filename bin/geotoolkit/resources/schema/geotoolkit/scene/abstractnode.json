@@ -1,0 +1,29 @@
+{
+  "additionalProperties": true,
+  "description": "A JSON schema describing geotoolkit Abstract Node",
+  "id": "/geotoolkit.scene.AbstractNode",
+  "title": "Geotoolkit Abstract Node Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.Node" },
+    {
+      "properties": {
+        "localTransform": {
+          "description": "Transformation applied to this node",
+          "id": "geotoolkit.scene.AbstractNode/properties/localTransform",
+          "title": "Local Transformation",
+          "oneOf": [
+            { "$ref": "/geotoolkit.util.Transformation" },
+            { "type": "null" }
+          ]
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.scene.AbstractNode",
+            "id": "/geotoolkit.scene.AbstractNode/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}

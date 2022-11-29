@@ -1,0 +1,94 @@
+/* System Theme Switch */
+:root {
+  --el-color-primary: var(--systemThemeColor) !important;
+}
+
+/* Default el-Button system theme switching style */
+.el-button--default {
+  --el-button-font-color: #fff !important;
+  --el-button-background-color: var(--systemThemeColor) !important;
+  --el-button-border-color: var(--systemThemeColor) !important;
+  --el-button-hover-color: var(--systemThemeColor) !important;
+  --el-button-active-font-color: #e6e6e6 !important;
+  --el-button-active-background-color: var(--systemThemeColor) !important;
+  --el-button-active-border-color: var(--systemThemeColor) !important;
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background-color: var(--systemThemeColor) !important;
+    border-color: var(--systemThemeColor) !important;
+  }
+}
+
+/* custom switch */
+.custom-switch {
+  --before-text: '\5f00';
+  --after-text: '\5173';
+  $beforeText: var(--before-text);
+  $afterText: var(--after-text);
+
+  .el-switch__core {
+    position: relative;
+  }
+
+  &:not(.is-checked) .el-switch__core {
+    &::after {
+      position: absolute;
+      top: -2px;
+      right: 5px;
+      font-size: 12px;
+      color: #fff;
+      content: $afterText;
+    }
+  }
+
+  &.is-checked .el-switch__core {
+    &::before {
+      position: absolute;
+      top: -1px;
+      left: 5px;
+      font-size: 12px;
+      color: #fff;
+      content: $beforeText;
+    }
+  }
+}
+
+/* custom card */
+.el-card {
+  --el-card-border-radius: 2px;
+  --el-card-padding: 12px;
+
+  .el-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: 0 var(--el-card-padding);
+    font-size: 0.875rem;
+  }
+}
+
+/* drawer style in night mode */
+.night-mode {
+  $itemColor: #151515 !important;
+
+  .el-drawer {
+    --el-drawer-background-color: #151515 !important;
+  }
+
+  .el-divider__text {
+    color: inherit !important;
+    background-color: var(--el-drawer-background-color) !important;
+  }
+
+  .el-switch__label:not(.is-active) {
+    color: $navbarColor !important;
+  }
+
+  .el-card {
+    color: $navbarColor !important;
+    background-color: $itemColor !important;
+  }
+}

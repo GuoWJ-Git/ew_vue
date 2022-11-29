@@ -1,0 +1,399 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget",
+    "description": "Schema describing SeismicView Widget",
+    "title": "SeismicView Widget Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.widgets.BaseWidget"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.seismic.widgets.SeismicViewWidget",
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/ClassName"
+                        }
+                    ]
+                },
+                "layouttype": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/layouttype",
+                    "type": "string"
+                },
+                "title": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title",
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/text",
+                            "type": "string"
+                        },
+                        "visible": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/visible",
+                            "type": "boolean"
+                        },
+                        "textstyle": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/textstyle",
+                            "$ref": "/geotoolkit.attributes.TextStyle"
+                        },
+                        "size": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/size",
+                            "type": "integer"
+                        },
+                        "alignment": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/alignment",
+                            "$ref": "/geotoolkit.util.AnchorType"
+                        },
+                        "location": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/location",
+                            "type": "string"
+                        },
+                        "cssclass": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/title/properties/cssclass",
+                            "type": "string"
+                        }
+                    }
+                },
+                "colorbar": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar",
+                    "type": "object",
+                    "properties": {
+                        "alignment": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/alignment",
+                            "anyOf": [
+                                { "type": "null" },
+                                { "type": "string" },
+                                { "type": "number" }
+                            ]
+                        },
+                        "axis": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis",
+                            "type": "object",
+                            "properties": {
+                                "autolabelrotation": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/autolabelrotation",
+                                    "type": "boolean"
+                                },
+                                "baseline": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/baseline",
+                                    "type": "object",
+                                    "properties": {
+                                        "visible": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/baseline/properties/visible",
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "item": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/item",
+                                    "$ref": "/geotoolkit.axis.Axis"
+                                },
+                                "size": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/size",
+                                    "type": "integer"
+                                },
+                                "tickgenerator": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/axis/properties/visible",
+                                    "type": "object"
+                                }
+
+                            }
+                        },
+                        "colorbox": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/colorbox",
+                            "type": "object",
+                            "properties": {
+                                "size": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/colorbox/properties/size",
+                                    "type": "integer"
+                                },
+                                "linestyle": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/colorbox/properties/linestyle",
+                                    "$ref": "/geotoolkit.attributes.LineStyle"
+                                }
+                            }
+                        },
+                        "cssclass": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/cssclass",
+                            "type": "string"
+                        },
+                        "location": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/location",
+                            "type": "string"
+                        },
+                        "margin": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/margin",
+                            "oneOf": [
+                                { "type": "string" },
+                                { "type": "number" },
+                                { "type": "object" },
+                                { "$ref": "/geotoolkit.attributes.SpaceStyle"}
+                            ]
+                        },
+                        "maxheight": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/maxheight",
+                            "oneOf": [
+                                { "type": "integer" },
+                                { "type": "string" }
+                            ]
+                        },
+                         "title": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/title",
+                            "type": "object",
+                            "properties": {
+                                "size": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/title/properties/size",
+                                    "type": "integer"
+                                },
+                                "visible": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/title/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "text": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/title/properties/text",
+                                    "type": "string"
+                                },
+                                "textstyle": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/title/properties/textstyle",
+                                    "$ref": "/geotoolkit.attributes.TextStyle"
+                                }
+                            }
+                        },
+                        "visible": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/colorbar/properties/visible",
+                            "type": "boolean"
+                        }                    }
+                },
+                "axes": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes",
+                    "type": "object",
+                    "properties": {
+                        "samples": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples",
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "cssclass": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/cssclass",
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/location",
+                                    "type": "string"
+                                },
+                                "instance": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/instance",
+                                    "$ref": "/geotoolkit.axis.Axis"
+                                },
+                                "size": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/size",
+                                    "type": "integer"
+                                },
+                                "title": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/title",
+                                    "type": "object",
+                                    "properties": {
+                                        "text": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/title/properties/text",
+                                            "type": "string"
+                                        },
+                                        "visible": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/title/properties/visible",
+                                            "type": "boolean"
+                                        },
+                                        "textstyle": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/title/properties/textstyle",
+                                            "$ref": "/geotoolkit.attributes.TextStyle"
+                                        }
+                                    }
+                                },
+                                "ticks": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/samples/properties/ticks",
+                                    "$ref": "/geotoolkit.axis.TickGenerator"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers",
+                            "type": "object",
+                            "properties": {
+                                "fields": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/fields",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "color": { "type": "string"},
+                                            "name": { "type": "string" },
+                                            "visible": { "type": "boolean" },
+                                            "minimumspan": { "type": "integer" }
+                                        }
+                                    }
+                                },
+                                "options": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/options",
+                                    "type": "object",
+                                    "properties": {
+                                        "minimumspan": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/options/properties/minimumspan",
+                                            "type": "integer"
+                                        },
+                                        "location": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/options/properties/location",
+                                            "type": "string"
+                                        },
+                                        "direction": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/options/properties/direction",
+                                            "type": "string"
+                                        },
+                                        "size": {
+                                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/axes/properties/headers/properties/options/properties/size",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "scroll": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll",
+                    "type": "object",
+                    "properties": {
+                        "horizontal": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/horizontal",
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/horizontal/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "cssclass": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/horizontal/properties/cssclass",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "vertical": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/vertical",
+                            "type": "object",
+                            "properties": {
+                                "visible": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/vertical/properties/visible",
+                                    "type": "boolean"
+                                },
+                                "cssclass": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scroll/properties/vertical/properties/cssclass",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "annotationssizes": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/annotationssizes",
+                    "anyOf": [
+                        { "type": "null" },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "east": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/annotationssizes/properties/east",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "south": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/annotationssizes/properties/south",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "west": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/annotationssizes/properties/west",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                },
+                                "north": {
+                                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/annotationssizes/properties/north",
+                                    "anyOf": [
+                                        { "type": "null" },
+                                        { "type": "string" },
+                                        { "type": "integer" }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "autoseismiclimits": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/autoseismiclimits",
+                    "type": "boolean"
+                },
+                "tools": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/tools",
+                    "type": "object",
+                    "properties": {
+                        "colorbar": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/tools/properties/colorbar",
+                            "$ref": "/geotoolkit.seismic.widgets.tools.FloatingColorBar"
+                        }
+                    }
+                },
+                "scale": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scale",
+                    "type": "object",
+                    "properties": {
+                        "deviceunit": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scale/properties/deviceunit",
+                            "$ref": "/geotoolkit.util.Unit"
+                        },
+                        "sampleunit": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scale/properties/sampleunit",
+                            "anyOf": [
+                                { "type": "null" },
+                                { "ref": "/geotoolkit.util.Unit" }
+                            ]
+                        },
+                        "tracescale": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scale/properties/properties/tracescale",
+                            "type": "number"
+                        },
+                        "samplescale": {
+                            "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/scale/properties/samplescale",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "sampleunit",
+                        "tracescale",
+                        "samplescale"
+                    ]
+                },
+                "pipeline": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/pipeline",
+                    "$ref": "/geotoolkit.seismic.pipeline.SeismicPipeline"
+                },
+                "orientation": {
+                    "id": "/geotoolkit.seismic.widgets.SeismicViewWidget/properties/orientation",
+                    "default": "vertical",
+                    "type": "string",
+                    "enum": ["vertical", "horizontal"],
+                    "description": "The orientation in which the widget is presented",
+                    "title": "Orientation"
+                }
+            }
+        }
+    ]
+}

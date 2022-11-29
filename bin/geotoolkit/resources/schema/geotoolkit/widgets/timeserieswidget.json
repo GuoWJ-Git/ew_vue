@@ -1,0 +1,57 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.TimeSeriesWidget",
+  "description": "Schema describing Carnac TimeSeries Widget",
+  "title": "TimeSeries Widget Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.BaseWidget"},
+    {
+      "properties": {
+        "title": {
+          "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/title",
+          "type": "object",
+            "properties": {
+              "visible": {
+                "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/title/properties/visible",
+                "type": "boolean"
+              },
+              "text": {
+                "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/title/properties/text",
+                "type": "string"
+              }
+            }
+          },
+        "legends": {
+          "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/legends",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/legends/properties/visible",
+              "type": "boolean"
+            }
+          }
+        },
+        "tooltips": {
+          "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/tooltips",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/tooltips/properties/visible",
+              "type": "boolean"
+            }
+          }
+        },
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.TimeSeriesWidget",
+              "id": "/geotoolkit.widgets.TimeSeriesWidget/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

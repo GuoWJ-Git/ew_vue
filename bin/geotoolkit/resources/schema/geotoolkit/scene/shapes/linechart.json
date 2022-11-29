@@ -1,0 +1,23 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.controls.shapes.LineChart",
+    "description": "Schema describing LineChart",
+    "title": "LineChart Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.Group"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.controls.shapes.LineChart",
+                            "id": "/geotoolkit.controls.shapes.LineChart/properties/ClassName"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

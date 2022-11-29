@@ -1,0 +1,26 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.attributes.ColoredStyle",
+  "type": "object",
+  "description": "Schema describing the geotoolkit Colored Style class",
+  "allOf": [
+    { "$ref": "/geotoolkit.attributes.Style" },
+    {
+      "properties": {
+        "color": {
+          "id": "/geotoolkit.attributes.ColoredStyle/properties/color",
+          "title": "Color",
+          "description": "The color defined for this style",
+          "type": "string",
+          "format": "color"
+        },
+        "ClassName": {
+          "allOf": [{"#ref": "/ClassName"}, {
+            "default": "geotoolkit.attributes.ColoredStyle",
+            "id": "/geotoolkit.attributes.ColoredStyle/properties/ClassName"
+          }]
+        }
+      }
+    }
+  ]
+}
